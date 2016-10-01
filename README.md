@@ -18,7 +18,7 @@ https://github.com/o-marshmallow/PocketCHIP-pocket-home
 Also, all the game installers and config files have been created taking the job previously done by some great people at the Next Thing Co's forums: 
 https://bbs.nextthing.co/ 
 
-PocketInstaller has been created by Damian Vila (@damianvila) and Iker Garc√a. 
+PocketInstaller has been created by Damian Vila (@damianvila) and Iker Garc√≠a. 
 
 **Motivation** 
 
