@@ -1,5 +1,17 @@
 #!/bin/bash
 
+if hash zenity 2>/dev/null; then
+  :
+else
+  sudo apt-get install zenity
+fi
+if hash yad 2>/dev/null; then
+  :
+else 
+  echo "deb http://pkg.bunsenlabs.org/debian jessie-backports main" | sudo tee -a /etc/apt/sources.list
+  sudo apt-get install yad
+fi
+
 if hash mednafen 2>/dev/null; then
   :
 else
@@ -15,8 +27,13 @@ if hash prboom  2>/dev/null; then
 else
   P3="Doom|./Installers/doom.sh"
 fi
+if hash openttd 2>/dev/null; then
+  :
+else 
+  P4="OpenTTD|./Installers/openttd.sh"
+fi
 
-menu=($P1 $P2 $P3)
+menu=($P1 $P2 $P3 $P4)
   
 yad_opts=(--form
 --scroll

@@ -1,24 +1,3 @@
-**Add repositories**
-
-sudo nano /etc/apt/sources.list
-
-Add these lines to the end:
-
-deb http://pkg.bunsenlabs.org/debian bunsen-hydrogen main
-
-deb http://pkg.bunsenlabs.org/debian jessie-backports main
-
-**Install YAD**
-
-sudo apt-get update
-sudo apt-get install YAD
-
-After this you can just remove the lines added previously to the sources.list file, will usually be slower.
-
-**Install Zenity**
-
-sudo apt-get install zenity
-
 **Run the GUI**
 
 When you want to install something just go to the folder where this project is stored and run ./PocketInstaller.sh
