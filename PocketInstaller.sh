@@ -3,12 +3,14 @@
 if hash zenity 2>/dev/null; then
   :
 else
+  sudo apt-get update
   sudo apt-get install zenity
 fi
 if hash yad 2>/dev/null; then
   :
 else 
-  echo "deb http://pkg.bunsenlabs.org/debian jessie-backports main" | sudo tee -a /etc/apt/sources.list
+  echo "deb http://pkg.bunsenlabs.org/debian bunsen-hydrogen  main" | sudo tee -a /etc/apt/sources.list
+  sudo apt-get update
   sudo apt-get install yad
 fi
 
