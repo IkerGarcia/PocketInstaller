@@ -17,25 +17,35 @@ fi
 if hash mednafen 2>/dev/null; then
   :
 else
-  P1="Mednafen(GB,GBA,NES,SNES,NPC)|./Installers/mednafen.sh"
+  P1="Mednafen(GB,GBA,NES,SNES,NPC)|/home/chip/PocketInstaller/Installers/mednafen.sh"
 fi
 if hash vice 2>/dev/null; then
   :
 else
-  P2="Vice(C64,C128)|./Installers/vice.sh"
+  P2="Vice(C64,C128)|/home/chip/PocketInstaller/Installers/vice.sh"
 fi
 if hash prboom  2>/dev/null; then
   :
 else
-  P3="Doom|./Installers/doom.sh"
+  P3="Doom|/home/chip/PocketInstaller/Installers/doom.sh"
 fi
 if hash openttd 2>/dev/null; then
   :
 else 
-  P4="OpenTTD|./Installers/openttd.sh"
+  P4="OpenTTD|/home/chip/PocketInstaller/Installers/openttd.sh"
+fi
+if hash dosbox 2>/dev/null; then
+  :
+else 
+  P5="DOSBox|/home/chip/PocketInstaller/Installers/dosbox.sh"
+fi
+if hash scummvm 2>/dev/null; then
+  :
+else
+  P6="ScummVM|/home/chip/PocketInstaller/Installers/scummvm.sh"
 fi
 
-menu=($P1 $P2 $P3 $P4)
+menu=($P1 $P2 $P3 $P4 $P5 $P6)
   
 yad_opts=(--form
 --scroll

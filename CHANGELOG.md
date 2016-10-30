@@ -14,3 +14,11 @@ Desktop icon added.
 YAD and  Zenity autoinstall feature added.
 
 OpenTTD included.
+
+**v2.1**
+
+**IMPORTANT NOTE:** Desktop icon now works perfectly. Just add command vala-terminal -e /home/chip/PocketInstaller/PocketInstaller.sh
+
+DOSBox included.
+
+ScummVM included.
