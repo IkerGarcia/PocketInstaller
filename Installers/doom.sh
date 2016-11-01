@@ -1,1 +1,1 @@
-sudo apt-get install prboom doom-wad-shareware
+sudo apt-get install -y prboom doom-wad-shareware

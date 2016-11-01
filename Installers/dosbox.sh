@@ -1,1 +1,1 @@
-sudo apt-get install dosbox
+sudo apt-get install -y dosbox

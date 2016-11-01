@@ -1,6 +1,6 @@
 #!/bin/bash
 
-cd /home/chip/.mednafen/roms
+cd ~/.mednafen/roms
 
 folderpath=$(ls)
 
