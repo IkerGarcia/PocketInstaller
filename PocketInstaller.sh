@@ -10,8 +10,19 @@ if hash yad 2>/dev/null; then
   :
 else 
   echo "deb http://pkg.bunsenlabs.org/debian bunsen-hydrogen  main" | sudo tee -a /etc/apt/sources.list
+  wget https://pkg.bunsenlabs.org/debian/pool/main/b/bunsen-keyring/bunsen-keyring_2016.7.2-1_all.deb
+  sudo dpkg -i bunsen-keyring_2016.7.2-1_all.deb
+  echo "#key added" | sudo tee -a /etc/apt/sources.list
   sudo apt-get update
   sudo apt-get install yad
+fi
+if grep -Fxq "deb http://pkg.bunsenlabs.org/debian bunsen-hydrogen  main" /etc/apt/sources.list && grep -Fxq "#key added" /etc/apt/sources.list; then
+  :
+else
+  wget https://pkg.bunsenlabs.org/debian/pool/main/b/bunsen-keyring/bunsen-keyring_2016.7.2-1_all.deb
+  sudo dpkg -i bunsen-keyring_2016.7.2-1_all.deb
+  sudo apt-get update
+  echo "#key added" | sudo tee -a /etc/apt/sources.list
 fi
 
 if hash mednafen 2>/dev/null; then
@@ -51,7 +62,7 @@ yad_opts=(--form
 --scroll
 --text="Install Software"
 --image="/home/chip/PocketInstaller/icon.png"
---button="Install" --button="Exit" )
+--button="Install" --button="Exit")
 
 for m in "${menu[@]}"
 do
@@ -71,3 +82,8 @@ echo "selected: $name ($cmd)"
 $cmd
 fi
 done
+
+echo "Closing PocketInstaller, see you soon!"
+sleep 3
+kill -9 $PPID
+
