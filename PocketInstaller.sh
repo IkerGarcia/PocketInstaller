@@ -47,17 +47,22 @@ else
 fi
 if hash dosbox 2>/dev/null; then
   :
-  P6="ScummVM|Installers/scummvm.sh"
+else 
+  P5="DOSBox|/home/chip/PocketInstaller/Installers/dosbox.sh"
 fi
-P7="PocketHome|Installers/PocketHome.sh"
+if hash scummvm 2>/dev/null; then
+  :
+else
+  P6="ScummVM|/home/chip/PocketInstaller/Installers/scummvm.sh"
+fi
 
-menu=($P1 $P2 $P3 $P4 $P5 $P6 $P7)
+menu=($P1 $P2 $P3 $P4 $P5 $P6)
   
 yad_opts=(--form
 --scroll
 --text="Install Software"
---image="icon.png"
---button="Install" --button="Exit" )
+--image="/home/chip/PocketInstaller/icon.png"
+--button="Install" --button="Exit")
 
 for m in "${menu[@]}"
 do
@@ -77,3 +82,8 @@ echo "selected: $name ($cmd)"
 $cmd
 fi
 done
+
+echo "Closing PocketInstaller, see you soon!"
+sleep 3
+kill -9 $PPID
+
