@@ -1,1 +1,1 @@
-sudo apt-get install mednafen libsdl2-dev
+sudo apt-get install -y mednafen libsdl2-dev

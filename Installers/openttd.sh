@@ -1,1 +1,1 @@
-sudo apt-get install openttd
+sudo apt-get install -y openttd
