@@ -31,3 +31,6 @@ Key for the BunsenLabs repo added, no more warnings after updating.
 
 Closing message added.
 
+**v2.3**
+
+Code fixes thanks to @andreacampanella: relative paths and -y flag for autoinstall. Thank you!
