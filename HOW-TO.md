@@ -1,4 +1,47 @@
+**Install**
+
+sudo wget -O ipi.sh http://bit.ly/pokeinst
+
+sudo chmod +x ipi.sh
+
+./ipi.sh
+
 **Run the GUI**
+
+Just go to the PocketInstaller folder and run:
+./PocketInstaller.sh
+
+If you already have installed any of the offered systems it won't be offered to install.
+
+After installing Pocket Home (Marshmallow Edition) you should consider creating a desktop icon (with the icon provided in the PocketInstaller folder) and the following command:
+
+vala-terminal -fs 8 -g 20 20 -e ~/PocketInstaller/PocketInstaller.sh
+
+**Launchers**
+
+Most of the offered systems will have a launcher that you can execute or add as a command for an icon. They can be found in ~/PocketInstaller/PocketInstaller.sh
+
+Some systems don't have any launcher as they are run easily, just with one command.
+
+Doom: prboom
+DOSBox: dosbox
+
+**Configuration files**
+
+Configuration files now are automatically copied into the required folders, even with screen resolution checking! However, if needed just look at ~/PocketInstaller/Configuration
+
+**Update**
+
+Just run in the folder that it's stored:
+
+./ipi.sh
+
+If it has been deleted repeat the installation procedure.
+
+**Following instructions are deprecated since v3.0**
+
+
+~~**Run the GUI**
 
 When you want to install something just go to the folder where this project is stored and run ./PocketInstaller.sh
 If any of the available programs is installed, you won't see it available for the installation.
@@ -17,5 +60,5 @@ The scripts that run the different programs can be found in the Launchers folder
 
 **Copy config files**
 
-Config files (with resolution, keys mapped, etc.) can be found in the Configuration folder. Just replace the original ones with this versions.
+Config files (with resolution, keys mapped, etc.) can be found in the Configuration folder. Just replace the original ones with this versions.~~
 

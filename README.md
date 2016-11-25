@@ -32,4 +32,8 @@ Everyone can contribute to this project, improving the code or adding functions.
 
 Special thanks to Andrea Campanella (@andreacampanella), for the amazing contribution from v2.3.
 
+Special thanks to Kolja Windeler (@KoljaWindeler), for the amazing idea of automatically detecting screen resolution and modifying configuration files. Also, for acting as beta tester and improving the code.
+
+Special thanks to CharonPDX for acting as beta tester and giving useful advices that will be applied in the future.
+
 **License** This project is licensed under the MIT license (read License file). Of course, this license affects only to the parts we have created, all the other tools (YAD, Zenity, Pocket Home and so on) hold their own license. Regarding to us, share, collaborate and enjoy!

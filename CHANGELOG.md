@@ -34,3 +34,19 @@ Closing message added.
 **v2.3**
 
 Code fixes thanks to @andreacampanella: relative paths and -y flag for autoinstall. Thank you!
+
+**v3.0**
+
+PocketInstaller is now a tar package!: easier installation, just running one script.
+
+Update option added, just launch the install script to check for updates.
+
+Screen resolution check feature has been added, thanks to @KoljaWindeler for having the idea, testing it and improving the code. Resolution is parsed to Mednafen configuration file (more systems will be included in future releases).
+
+Pocket Home(Marshmallow edition) included. Strongly recommended its installation!
+
+Vice configuration file added, automatically parsed.
+
+Launchers added for OpenTTD and ScummVM.
+
+Thanks to CharonPDX for beta testing.

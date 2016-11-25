@@ -1,5 +1,9 @@
 #!/bin/bash
 
+cd ~/PocketInstaller
+
+sudo apt-mark hold -qq  pocket-home
+
 if hash zenity 2>/dev/null; then
   :
 else
@@ -28,40 +32,45 @@ fi
 if hash mednafen 2>/dev/null; then
   :
 else
-  P1="Mednafen(GB,GBA,NES,SNES,NPC)|PocketInstaller/Installers/mednafen.sh"
+  P1="Mednafen(GB,GBA,NES,SNES,NPC)|Installers/mednafen.sh"
 fi
-if hash vice 2>/dev/null; then
+if hash x64 2>/dev/null; then
   :
 else
-  P2="Vice(C64,C128)|PocketInstaller/Installers/vice.sh"
+  P2="Vice(C64,C128)|Installers/vice.sh"
 fi
 if hash prboom  2>/dev/null; then
   :
 else
-  P3="Doom|PocketInstaller/Installers/doom.sh"
+  P3="Doom|Installers/doom.sh"
 fi
 if hash openttd 2>/dev/null; then
   :
 else 
-  P4="OpenTTD|PocketInstaller/Installers/openttd.sh"
+  P4="OpenTTD|Installers/openttd.sh"
 fi
 if hash dosbox 2>/dev/null; then
   :
 else 
-  P5="DOSBox|PocketInstaller/Installers/dosbox.sh"
+  P5="DOSBox|Installers/dosbox.sh"
 fi
 if hash scummvm 2>/dev/null; then
   :
 else
-  P6="ScummVM|PocketInstaller/Installers/scummvm.sh"
+  P6="ScummVM|Installers/scummvm.sh"
+fi
+if test -f ~/.pocket-home/.version; then
+  :
+else
+  P7="PocketHome(Marshmallow)|Installers/pockethome.sh"
 fi
 
-menu=($P1 $P2 $P3 $P4 $P5 $P6)
+menu=($P1 $P2 $P3 $P4 $P5 $P6 $P7)
   
 yad_opts=(--form
 --scroll
 --text="Install Software"
---image="PocketInstaller/icon.png"
+--image="icon.png"
 --button="Install" --button="Exit")
 
 for m in "${menu[@]}"
