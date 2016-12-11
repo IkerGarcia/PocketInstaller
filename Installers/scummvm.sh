@@ -1,1 +1,1 @@
-sudo apt-get install scummvm
+sudo apt-get install -y scummvm
