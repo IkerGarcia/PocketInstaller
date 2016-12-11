@@ -10,6 +10,11 @@ else
   sudo apt-get update
   sudo apt-get install -y zenity
 fi
+if hash jq 2>/dev/null; then
+  :
+else
+  sudo apt-get install -y jq
+fi
 if hash yad 2>/dev/null; then
   :
 else 
@@ -60,7 +65,8 @@ else
   P6="ScummVM|Installers/scummvm.sh"
 fi
 if test -f ~/.pocket-home/.version; then
-  :
+  sed 's/},\s*]/}\n]/' /home/chip/.pocket-home/config.json | jq '.pages[0].items |= (.+ [{"name":"Pocket Installer","icon":"/home/chip/PocketInstaller/desktopicon.png","shell":"/home/chip/PocketInstaller/PocketInstaller.sh"}])' > tmp.$$.json
+  mv tmp.$$.json /home/chip/.pocket-home/config.json
 else
   P7="PocketHome(Marshmallow)|Installers/pockethome.sh"
 fi
