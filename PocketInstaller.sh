@@ -12,7 +12,7 @@ else
 fi
 if hash yad 2>/dev/null; then
   :
-else 
+else
   echo "deb http://pkg.bunsenlabs.org/debian bunsen-hydrogen  main" | sudo tee -a /etc/apt/sources.list
   wget https://pkg.bunsenlabs.org/debian/pool/main/b/bunsen-keyring/bunsen-keyring_2016.7.2-1_all.deb
   sudo dpkg -i bunsen-keyring_2016.7.2-1_all.deb
@@ -34,6 +34,11 @@ if hash mednafen 2>/dev/null; then
 else
   P1="Mednafen(GB,GBA,NES,SNES,NPC)|Installers/mednafen.sh"
 fi
+if hash pcsx 2>/dev/null; then
+  :
+else
+  P2="PCSX(PSX)|Installers/pcsx.sh"
+fi
 if hash x64 2>/dev/null; then
   :
 else
@@ -46,12 +51,12 @@ else
 fi
 if hash openttd 2>/dev/null; then
   :
-else 
+else
   P4="OpenTTD|Installers/openttd.sh"
 fi
 if hash dosbox 2>/dev/null; then
   :
-else 
+else
   P5="DOSBox|Installers/dosbox.sh"
 fi
 if hash scummvm 2>/dev/null; then
@@ -66,7 +71,7 @@ else
 fi
 
 menu=($P1 $P2 $P3 $P4 $P5 $P6 $P7)
-  
+
 yad_opts=(--form
 --scroll
 --text="Install Software"
@@ -95,4 +100,3 @@ done
 echo "Closing PocketInstaller, see you soon!"
 sleep 3
 kill -9 $PPID
-
