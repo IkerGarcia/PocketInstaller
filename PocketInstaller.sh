@@ -72,7 +72,7 @@ fi
 if test -f ~/.pocket-home/.version; then
   :
 else
-  P8="PocketHome(Marshmallow)|Installers/pockethome.sh"
+  P9="PocketHome(Marshmallow)|Installers/pockethome.sh"
 fi
 
 menu=($P1 $P2 $P3 $P4 $P5 $P6 $P7 $P8 $P9)
