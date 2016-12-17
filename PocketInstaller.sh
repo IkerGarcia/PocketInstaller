@@ -34,11 +34,6 @@ if hash mednafen 2>/dev/null; then
 else
   P1="Mednafen(GB,GBA,NES,SNES,NPC)|Installers/mednafen.sh"
 fi
-if hash pcsx 2>/dev/null; then
-  :
-else
-  P2="PCSX(PSX)|Installers/pcsx.sh"
-fi
 if hash x64 2>/dev/null; then
   :
 else
@@ -64,13 +59,18 @@ if hash scummvm 2>/dev/null; then
 else
   P6="ScummVM|Installers/scummvm.sh"
 fi
+if hash pcsx 2>/dev/null; then
+  :
+else
+  P7="PCSX(PSX)|Installers/pcsx.sh"
+fi
 if test -f ~/.pocket-home/.version; then
   :
 else
-  P7="PocketHome(Marshmallow)|Installers/pockethome.sh"
+  P8="PocketHome(Marshmallow)|Installers/pockethome.sh"
 fi
 
-menu=($P1 $P2 $P3 $P4 $P5 $P6 $P7)
+menu=($P1 $P2 $P3 $P4 $P5 $P6 $P7 $P8)
 
 yad_opts=(--form
 --scroll
