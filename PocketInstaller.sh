@@ -2,6 +2,8 @@
 
 cd ~/PocketInstaller
 
+exec &> >(tee -a log.txt)
+
 sudo apt-mark hold -qq  pocket-home
 
 if hash zenity 2>/dev/null; then
