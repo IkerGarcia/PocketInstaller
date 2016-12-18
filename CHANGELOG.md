@@ -50,3 +50,14 @@ Vice configuration file added, automatically parsed.
 Launchers added for OpenTTD and ScummVM.
 
 Thanks to CharonPDX for beta testing.
+
+
+**v3.1**
+
+GnGeo included.
+
+PCSX included. Thanks to @torch2424 for his amazing contribution.
+
+**v3.2**
+
+A log.txt file is written after each run, making easier to find and fix any issue. Thanks to sWampy for the suggestion.

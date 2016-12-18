@@ -36,4 +36,6 @@ Special thanks to Kolja Windeler (@KoljaWindeler), for the amazing idea of autom
 
 Special thanks to CharonPDX for acting as beta tester and giving useful advices that will be applied in the future.
 
+Special thanks to Aaron Turner (@torch2424), for adding PCSX.
+
 **License** This project is licensed under the MIT license (read License file). Of course, this license affects only to the parts we have created, all the other tools (YAD, Zenity, Pocket Home and so on) hold their own license. Regarding to us, share, collaborate and enjoy!
