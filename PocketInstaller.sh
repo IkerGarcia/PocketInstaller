@@ -77,9 +77,7 @@ else
   P8="GnGeo(NeoGeo)|Installers/gngeo.sh"
 fi
 if test -f ~/.pocket-home/.version; then
-  sed 's/},\s*]/}\n]/' /home/chip/.pocket-home/config.json | jq '.pages[0].items |= (.+ [{"name":"Pocket Installer","icon":"/home/chip/PocketInstaller/desktopicon.png","shell":"/home/chip/PocketInstaller/PocketInstaller.sh"}])' > tmp.$$.json
-  mv tmp.$$.json /home/chip/.pocket-home/config.json
-  killall pocket-home && pocket-home
+  :
 else
   P9="PocketHome(Marshmallow)|Installers/pockethome.sh"
 fi
