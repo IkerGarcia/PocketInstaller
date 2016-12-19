@@ -12,6 +12,11 @@ else
   sudo apt-get update
   sudo apt-get install -y zenity
 fi
+if hash jq 2>/dev/null; then
+  :
+else
+  sudo apt-get install -y jq
+fi
 if hash yad 2>/dev/null; then
   :
 else
