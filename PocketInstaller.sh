@@ -2,7 +2,9 @@
 
 cd ~/PocketInstaller
 
-exec &> >(sudo tee -a log.txt)
+echo "Welcome to PocketInstaller" | sudo tee -a log.txt
+sudo chmod 777 log.txt
+exec &> >(tee -a log.txt)
 
 sudo apt-mark hold -qq  pocket-home
 
