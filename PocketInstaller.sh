@@ -2,6 +2,8 @@
 
 cd ~/PocketInstaller
 
+echo "Welcome to PocketInstaller" | sudo tee -a log.txt
+sudo chmod 777 log.txt
 exec &> >(tee -a log.txt)
 
 sudo apt-mark hold -qq  pocket-home
@@ -21,7 +23,7 @@ if hash yad 2>/dev/null; then
   :
 else
   echo "deb http://pkg.bunsenlabs.org/debian bunsen-hydrogen  main" | sudo tee -a /etc/apt/sources.list
-  wget https://pkg.bunsenlabs.org/debian/pool/main/b/bunsen-keyring/bunsen-keyring_2016.7.2-1_all.deb
+  sudo wget https://pkg.bunsenlabs.org/debian/pool/main/b/bunsen-keyring/bunsen-keyring_2016.7.2-1_all.deb
   sudo dpkg -i bunsen-keyring_2016.7.2-1_all.deb
   echo "#key added" | sudo tee -a /etc/apt/sources.list
   sudo apt-get update
@@ -30,7 +32,7 @@ fi
 if grep -Fxq "deb http://pkg.bunsenlabs.org/debian bunsen-hydrogen  main" /etc/apt/sources.list && grep -Fxq "#key added" /etc/apt/sources.list; then
   :
 else
-  wget https://pkg.bunsenlabs.org/debian/pool/main/b/bunsen-keyring/bunsen-keyring_2016.7.2-1_all.deb
+  sudo wget https://pkg.bunsenlabs.org/debian/pool/main/b/bunsen-keyring/bunsen-keyring_2016.7.2-1_all.deb
   sudo dpkg -i bunsen-keyring_2016.7.2-1_all.deb
   sudo apt-get update
   echo "#key added" | sudo tee -a /etc/apt/sources.list

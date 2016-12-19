@@ -1,4 +1,4 @@
-wget -O install-pockethome http://bit.ly/29uWueR
+sudo wget -O install-pockethome http://bit.ly/29uWueR
 sudo chmod +x install-pockethome
 ./install-pockethome
 
