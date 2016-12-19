@@ -26,7 +26,9 @@ Pocket C.H.I.P is an amazing Linux handheld machine. It allows, and will allow m
 
 **Contributors** 
 
-Everyone can contribute to this project, improving the code or adding functions. If anyone wants something to be added to the installer we will try to do it. Also, .sh files and config files are always welcome, so we just need to add the pushed software to the main GUI. 
+Everyone can contribute to this project, improving the code or adding functions. If anyone wants something to be added to the installer we will try to do it. Also, .sh files and config files are always welcome, so we just need to add the pushed software to the main GUI.
+
+As this is being updated regularly, don't forget to rebase your fork before creating a pull-request. 
 
 **Credits**
 
@@ -37,5 +39,7 @@ Special thanks to Kolja Windeler (@KoljaWindeler), for the amazing idea of autom
 Special thanks to CharonPDX for acting as beta tester and giving useful advices that will be applied in the future.
 
 Special thanks to Aaron Turner (@torch2424), for adding PCSX.
+
+Special thanks to Scott Baeder and Tyler Steele for reporting bugs and testing to find the fix.
 
 **License** This project is licensed under the MIT license (read License file). Of course, this license affects only to the parts we have created, all the other tools (YAD, Zenity, Pocket Home and so on) hold their own license. Regarding to us, share, collaborate and enjoy!

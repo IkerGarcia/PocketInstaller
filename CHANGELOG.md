@@ -61,3 +61,9 @@ PCSX included. Thanks to @torch2424 for his amazing contribution.
 **v3.2**
 
 A log.txt file is written after each run, making easier to find and fix any issue. Thanks to sWampy for the suggestion.
+
+**v3.3**
+
+Preparing the next major release: jq is installed, a folder with icons has been added. However, you still need to add them to the desktop manually.
+
+Bug fixes. Thanks to Scott Baeder and Tyler Steele for reporting and testing several times.
