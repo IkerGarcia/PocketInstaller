@@ -2,7 +2,9 @@
 
 cd ~/PocketInstaller
 
-echo "Welcome to PocketInstaller" | sudo tee -a log.txt
+#sudo rm -R -f log.txt
+echo "Welcome to PocketInstaller" | sudo tee log.txt
+
 sudo chmod 777 log.txt
 exec &> >(tee -a log.txt)
 
@@ -17,7 +19,8 @@ fi
 if hash jq 2>/dev/null; then
   :
 else
-  sudo apt-get install -y jq
+ sudo apt-get update 
+ sudo apt-get install -y jq
 fi
 if hash yad 2>/dev/null; then
   :
