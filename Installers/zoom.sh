@@ -1,3 +1,4 @@
+#!/bin/bash
 # Install Zoom: interactive fiction parser for Z-machine, TADS, & HUGO
 wget -O /tmp/zoom.tgz http://www.logicalshift.co.uk/unix/zoom/zoom-1.1.5.tar.gz
 tar zxvf /tmp/zoom.tgz -C /home/chip

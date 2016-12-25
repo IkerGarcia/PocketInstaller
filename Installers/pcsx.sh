@@ -1,3 +1,4 @@
+#!/bin/bash
 sudo apt-get install -y git build-essential libsdl1.2-dev
 sudo git clone https://github.com/notaz/pcsx_rearmed.git /home/chip/pcsx_rearmed
 

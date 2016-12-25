@@ -1,3 +1,4 @@
+#!/bin/bash
 sudo apt-get update
 sudo apt install -y xinput-calibrator
 sudo wget -O install-pockethome http://bit.ly/29uWueR
