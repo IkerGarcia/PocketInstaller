@@ -2,6 +2,6 @@ sudo wget -O /tmp/gngeo.tar.gz https://storage.googleapis.com/google-code-archiv
 sudo tar -zxvf /tmp/gngeo.tar.gz -C /home/chip/
 sudo rm -r /tmp/gngeo.tar.gz
 cd /home/chip/gngeo-0.8
-./configure
-make
-make install
+sudo ./configure
+sudo make
+sudo make install

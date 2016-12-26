@@ -67,3 +67,13 @@ A log.txt file is written after each run, making easier to find and fix any issu
 Preparing the next major release: jq is installed, a folder with icons has been added. However, you still need to add them to the desktop manually.
 
 Bug fixes. Thanks to Scott Baeder and Tyler Steele for reporting and testing several times.
+
+**v3.4**
+
+PCSX installation fixed.
+
+xinput-calibrator, Pocket Home dependency added.
+
+Pop-up added to warn about the reboot (mandatory) after installing Pocket Home (Marshmallow edition).
+
+Log is reset before each run to avoid having a heavy file.
