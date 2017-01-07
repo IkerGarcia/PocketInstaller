@@ -42,4 +42,6 @@ Special thanks to Aaron Turner (@torch2424), for adding PCSX.
 
 Special thanks to Scott Baeder and Tyler Steele for reporting bugs and testing to find the fix.
 
+Special thanks to Eric W. Brown (@Feneric), for adding Zoom and the appropiate shebang to the scripts.
+
 **License** This project is licensed under the MIT license (read License file). Of course, this license affects only to the parts we have created, all the other tools (YAD, Zenity, Pocket Home and so on) hold their own license. Regarding to us, share, collaborate and enjoy!

@@ -81,13 +81,17 @@ if hash gngeo 2>/dev/null; then
 else
   P8="GnGeo(NeoGeo)|Installers/gngeo.sh"
 fi
+if hash zoom 2>/dev/null; then
+  :
+else
+  P9="Zoom(Z-machine)|Installers/zoom.sh"
 if test -f ~/.pocket-home/.version; then
   :
 else
-  P9="PocketHome(Marshmallow)|Installers/pockethome.sh"
+  P10="PocketHome(Marshmallow)|Installers/pockethome.sh"
 fi
 
-menu=($P1 $P2 $P3 $P4 $P5 $P6 $P7 $P8 $P9)
+menu=($P1 $P2 $P3 $P4 $P5 $P6 $P7 $P8 $P9 $P10)
 
 yad_opts=(--form
 --scroll
