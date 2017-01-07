@@ -85,6 +85,7 @@ if hash zoom 2>/dev/null; then
   :
 else
   P9="Zoom(Z-machine)|Installers/zoom.sh"
+fi
 if test -f ~/.pocket-home/.version; then
   :
 else
