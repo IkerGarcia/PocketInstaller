@@ -77,3 +77,11 @@ xinput-calibrator, Pocket Home dependency added.
 Pop-up added to warn about the reboot (mandatory) after installing Pocket Home (Marshmallow edition).
 
 Log is reset before each run to avoid having a heavy file.
+
+**v3.5**
+
+Zoom included.
+
+Appropiate shebang added to the scripts. 
+
+Thanks to Eric W. Brown (@Feneric) for both contributions.
