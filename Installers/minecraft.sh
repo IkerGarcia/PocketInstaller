@@ -23,3 +23,8 @@ sudo chmod +x build.sh
 
 # Moving start shellscript to base folder.
 mv ~/chipcraft-master/mcpi/start.sh ~/chipcraft-master/start.sh
+
+# Pop up installation successful
+
+zenity --info --text="Minecraft installed"
+

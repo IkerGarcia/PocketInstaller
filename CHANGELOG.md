@@ -98,4 +98,6 @@ RetroArch included.
 
 Thanks to Tarjei Tjonn (@CaptainZalo) for debugging all the scripts and creating the one for Minecraft. Excuse me for the typo in your name!
 
+**v3.7**
 
+Minor bug fixes: Minecraft script.

@@ -91,7 +91,7 @@ if test -f /usr/games/adventure || test -f /usr/games/bsdgames/adventure; then
 else
   P10="BSDgames|Installers/bsd.sh"
 fi
-if test -f /home/chip/chipcraft-master/mcpi/start.sh; then
+if test -f /home/chip/chipcraft-master/start.sh; then
   :
 else  
   P11="Minecraft|Installers/minecraft.sh"
