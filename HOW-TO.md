@@ -25,6 +25,8 @@ Some systems don't have any launcher as they are run easily, just with one comma
 
 Doom: prboom
 DOSBox: dosbox
+Minecraft: ~/chipcraft-master/start.sh
+Quake III: openarena
 
 **Configuration files**
 
