@@ -86,13 +86,33 @@ if hash zoom 2>/dev/null; then
 else
   P9="Zoom(Z-machine)|Installers/zoom.sh"
 fi
+if test -f /usr/games/adventure || test -f /usr/games/bsdgames/adventure; then
+  :
+else
+  P10="BSDgames|Installers/bsd.sh"
+fi
+if test -f /home/chip/chipcraft-master/start.sh; then
+  :
+else  
+  P11="Minecraft|Installers/minecraft.sh"
+fi
+if hash openarena 2>/dev/null; then
+  :
+else
+  P12="QuakeIII|Installers/quake3.sh"
+fi
+if hash retroarch 2>/dev/null; then
+  : 
+else
+  P13="RetroArch|Installers/retroarch.sh"
+fi
 if test -f ~/.pocket-home/.version; then
   :
 else
-  P10="PocketHome(Marshmallow)|Installers/pockethome.sh"
+  P14="PocketHome(Marshmallow)|Installers/pockethome.sh"
 fi
 
-menu=($P1 $P2 $P3 $P4 $P5 $P6 $P7 $P8 $P9 $P10)
+menu=($P1 $P2 $P3 $P4 $P5 $P6 $P7 $P8 $P9 $P10 $P11 $P12 $P13 $P14)
 
 yad_opts=(--form
 --scroll

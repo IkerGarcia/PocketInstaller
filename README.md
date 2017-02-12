@@ -44,4 +44,8 @@ Special thanks to Scott Baeder and Tyler Steele for reporting bugs and testing t
 
 Special thanks to Eric W. Brown (@Feneric), for adding Zoom and the appropiate shebang to the scripts.
 
-**License** This project is licensed under the MIT license (read License file). Of course, this license affects only to the parts we have created, all the other tools (YAD, Zenity, Pocket Home and so on) hold their own license. Regarding to us, share, collaborate and enjoy!
+Special thanks to Tarjei Tjonn (@CaptainZalo) for debugging all the scripts and creating the one for Minecraft. Excuse me for the typo in your name!
+
+**License** 
+
+This project is licensed under the MIT license (read License file). Of course, this license affects only to the parts we have created, all the other tools (YAD, Zenity, Pocket Home and so on) hold their own license. Regarding to us, share, collaborate and enjoy!
