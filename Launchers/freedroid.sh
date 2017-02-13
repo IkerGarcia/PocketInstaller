@@ -1,3 +1,3 @@
 #!/bin/bash
-freedroid -r .5
+freedroid -f -r .5
 
