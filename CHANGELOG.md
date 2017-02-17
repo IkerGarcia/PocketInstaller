@@ -101,3 +101,15 @@ Thanks to Tarjei Tjonn (@CaptainZalo) for debugging all the scripts and creating
 **v3.7**
 
 Minor bug fixes: Minecraft script.
+
+Thanks to Alfred for reporting the bug.
+
+**v3.8**
+
+Freedroid (Paradroid clone) included.
+
+XU4 (Ultima IV clone) included.
+
+Normalized modes on icons.
+
+Thanks to Eric W. Brown (@Feneric) for these contributions.
