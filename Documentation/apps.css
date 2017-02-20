@@ -1,0 +1,19 @@
+.content #Synopsis{
+	font-style:italic;
+	margin:.5 2 2 .5;
+}
+.content .AppIcon{
+	float:right;
+	max-width:5em;
+	max-height:5em;
+	margin:1em;
+}
+p.ReturnLink{
+	text-align:center;
+}
+
+p.ReturnLink a{
+	color:#EB008B;
+	font-weight:bold;
+}
+
