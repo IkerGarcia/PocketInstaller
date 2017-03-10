@@ -42,6 +42,12 @@ Special thanks to Aaron Turner (@torch2424), for adding PCSX.
 
 Special thanks to Scott Baeder and Tyler Steele for reporting bugs and testing to find the fix.
 
-Special thanks to Eric W. Brown (@Feneric), for adding Zoom and the appropiate shebang to the scripts.
+Special thanks to Eric W. Brown (@Feneric), for adding Zoom and the appropiate shebang to the scripts, including Freedroid and XU4, normalized icons.
 
-**License** This project is licensed under the MIT license (read License file). Of course, this license affects only to the parts we have created, all the other tools (YAD, Zenity, Pocket Home and so on) hold their own license. Regarding to us, share, collaborate and enjoy!
+Special thanks to Tarjei Tjonn (@CaptainZalo) for debugging all the scripts and creating the one for Minecraft. Excuse me for the typo in your name!
+
+Special thanks to Alfred for reporting bugs.
+
+**License** 
+
+This project is licensed under the MIT license (read License file). Of course, this license affects only to the parts we have created, all the other tools (YAD, Zenity, Pocket Home and so on) hold their own license. Regarding to us, share, collaborate and enjoy!

@@ -1,0 +1,12 @@
+# The default scaling factor in XU4 breaks it for PocketCHIP usage
+# due to screen size restrictions. This patch enables it to work.
+--- screen_sdl.cpp	2017-01-29 20:53:19.000000000 +0000
++++ screen_sdl.cpp.new	2017-01-29 20:50:07.000000000 +0000
+@@ -63,6 +63,7 @@
+     SDL_WM_SetIcon(SDL_LoadBMP(ICON_FILE), NULL);
+ #endif   
+ 
++    settings.scale = 1;
+     if (!SDL_SetVideoMode(320 * settings.scale, 200 * settings.scale, 0, SDL_HWSURFACE | SDL_ANYFORMAT | (settings.fullscreen ? SDL_FULLSCREEN : 0)))
+         errorFatal("unable to set video: %s", SDL_GetError());
+ 

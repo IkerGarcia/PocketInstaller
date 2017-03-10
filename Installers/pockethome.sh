@@ -1,8 +1,11 @@
 #!/bin/bash
+
 sudo apt-get update
 sudo apt install -y xinput-calibrator
-sudo wget -O install-pockethome http://bit.ly/29uWueR
+
+wget -O install-pockethome http://bit.ly/29uWueR
 sudo chmod +x install-pockethome
+
 ./install-pockethome
 
 sudo apt-mark hold -qq pocket-home

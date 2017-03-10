@@ -85,3 +85,31 @@ Zoom included.
 Appropiate shebang added to the scripts. 
 
 Thanks to Eric W. Brown (@Feneric) for both contributions.
+
+**v3.6**
+
+BSDGames included.
+
+Minecraft included.
+
+Quake III included.
+
+RetroArch included.
+
+Thanks to Tarjei Tjonn (@CaptainZalo) for debugging all the scripts and creating the one for Minecraft. Excuse me for the typo in your name!
+
+**v3.7**
+
+Minor bug fixes: Minecraft script.
+
+Thanks to Alfred for reporting the bug.
+
+**v3.8**
+
+Freedroid (Paradroid clone) included.
+
+XU4 (Ultima IV clone) included.
+
+Normalized modes on icons.
+
+Thanks to Eric W. Brown (@Feneric) for these contributions.

@@ -1,16 +1,24 @@
 #!/bin/bash
+
 # Install Zoom: interactive fiction parser for Z-machine, TADS, & HUGO
+
 wget -O /tmp/zoom.tgz http://www.logicalshift.co.uk/unix/zoom/zoom-1.1.5.tar.gz
 tar zxvf /tmp/zoom.tgz -C /home/chip
 rm /tmp/zoom.tgz
 cp -p zoom.patch /home/chip/zoom-1.1.5
+
 cd /home/chip/zoom-1.1.5
+
 ./configure
+
 patch -p0 < zoom.patch
+
 make
+
 sudo mkdir -p /usr/local/share/zoom/games
 sudo make install-strip
 # Clean up when we're done
+
 rm -rf /home/chip/zoom-1.1.5
 
 # Install a handful of titles to start out with
