@@ -113,3 +113,11 @@ XU4 (Ultima IV clone) included.
 Normalized modes on icons.
 
 Thanks to Eric W. Brown (@Feneric) for these contributions.
+
+**v3.9**
+
+Documentation included.
+
+Guides for Freedroid, XU4 and Zoom included.
+
+Thanks to Eric W. Brown (@Feneric) for these contributions.
