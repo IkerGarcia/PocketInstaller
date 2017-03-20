@@ -116,13 +116,33 @@ if hash freedroid 2>/dev/null; then
 else
   P15="Freedroid|Installers/freedroid.sh"
 fi
+if test -f ~/ColEm/ColEm.c; then
+  : 
+else
+  P16="ColEm|Installers/colem.sh"
+fi
+if test -f ~/ZEsarUX-4.1/scrsdl.c; then
+  :
+else
+  P17="ZEsarUX|Installers/zesarux.sh"
+fi
+if test -f ~/infocom/ZORK1.DAT; then
+  : 
+else 
+  P18="Zork|Installers/zork.sh"
+fi
+if test -f ~/infocom/HHGTTG.DAT; then
+  :
+else
+  P19="Hitchhiker's...|Installers/hhgttg.sh"
+fi
 if test -f ~/.pocket-home/.version; then
   :
 else
-  P16="PocketHome(Marshmallow)|Installers/pockethome.sh"
+  P20="PocketHome(Marshmallow)|Installers/pockethome.sh"
 fi
 
-menu=($P1 $P2 $P3 $P4 $P5 $P6 $P7 $P8 $P9 $P10 $P11 $P12 $P13 $P14 $P15 $P16)
+menu=($P1 $P2 $P3 $P4 $P5 $P6 $P7 $P8 $P9 $P10 $P11 $P12 $P13 $P14 $P15 $P16 $P17 $P18 $P19 $P20)
 
 yad_opts=(--form
 --scroll

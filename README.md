@@ -44,9 +44,11 @@ Special thanks to Scott Baeder and Tyler Steele for reporting bugs and testing t
 
 Special thanks to Eric W. Brown (@Feneric), for adding Zoom and the appropiate shebang to the scripts, including Freedroid and XU4, normalized icons. Also for adding the documentation and guides for Freedroid, XU4 and Zoom.
 
-Special thanks to Tarjei Tjonn (@CaptainZalo) for debugging all the scripts and creating the one for Minecraft. Excuse me for the typo in your name!
+Special thanks to Tarjei Tjonn (@CaptainZalo) for debugging all the scripts and creating the one for Minecraft. Also for hosting the files for Zork and The Hitchhiker's Guide to the Galaxy (HHGTTG) and creating the installation script. Excuse me for the typo in your name!
 
 Special thanks to Alfred for reporting bugs.
+
+Special thanks to Gustavo H M Silva (@gustavohmsilva) for the inspiration to add HHGTTG and Zork.
 
 **License** 
 

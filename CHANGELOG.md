@@ -121,3 +121,15 @@ Documentation included.
 Guides for Freedroid, XU4 and Zoom included.
 
 Thanks to Eric W. Brown (@Feneric) for these contributions.
+
+**v3.10**
+
+ColEm included.
+
+The Hitchhiker's Guide to the Galaxy (HHGTTG) included.
+
+ZEsarUX included.
+
+Zork included.
+
+Thanks to Gustavo H M Silva (@gustavohmsilva) for the inspiration to add HHGTTG  and Zork, and to @Tarjei Tjonn (@CaptainZalo) for the script and hosting the files.
