@@ -12,4 +12,4 @@ mkdir infocom
 cd ~/infocom
 
 # Download files
-wget https://github.com/CaptainZalo/Infocom/blob/master/HHGTTG.DAT
+wget https://github.com/CaptainZalo/Infocom/blob/master/hhgttg.dat
