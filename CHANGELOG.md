@@ -133,3 +133,9 @@ ZEsarUX included.
 Zork included.
 
 Thanks to Gustavo H M Silva (@gustavohmsilva) for the inspiration to add HHGTTG  and Zork, and to @Tarjei Tjonn (@CaptainZalo) for the script and hosting the files.
+
+**v3.11**
+
+Minor changes to HHGTTG and Zork (remote filenames).
+
+
