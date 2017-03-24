@@ -12,6 +12,6 @@ mkdir infocom
 cd ~/infocom
 
 # Download files
-wget https://github.com/CaptainZalo/Infocom/blob/master/ZORK1.DAT 
-wget https://github.com/CaptainZalo/Infocom/blob/master/ZORK2.DAT 
-wget https://github.com/CaptainZalo/Infocom/blob/master/ZORK3.DAT 
+wget https://github.com/CaptainZalo/Infocom/blob/master/zork1.dat 
+wget https://github.com/CaptainZalo/Infocom/blob/master/zork2.dat 
+wget https://github.com/CaptainZalo/Infocom/blob/master/zork3.dat 
