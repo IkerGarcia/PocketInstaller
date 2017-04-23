@@ -11,6 +11,7 @@ from locale import setlocale, LC_ALL
 from os.path import exists
 from os import mkdir, listdir
 from zipfile import ZipFile
+from argparse import ArgumentParser
 from HTMLParser import HTMLParser
 from curses import (wrapper, newpad, use_default_colors, error as CursesError,
                     KEY_DOWN, KEY_UP, KEY_LEFT, KEY_RIGHT, KEY_ENTER,
@@ -27,12 +28,56 @@ __intfic_page_list__ = [
     'http://www.ifarchive.org/indexes/if-archiveXgamesXalan.html',
     'https://dist.saugus.net/IF/'
 ]
-__story_folder__ = '/usr/share/IF'
+__story_folder__ = '/usr/local/share/IF'
 __story_types__ = ['ADRIFT', 'Alan', 'Glulx', 'Hugo', 'TADS', 'Z-code']
 __download_delay__ = .1
 
 # Set the locale to support the display of accented characters.
 setlocale(LC_ALL, '')
+
+
+def parseCommandLine(rawArgs=None, defaultFilter=" ".join(__story_types__),
+                     defaultLib=__story_folder__):
+    """
+    Parse command-line arguments.
+
+    Use the built-in Python argparse facility to parse the command-line
+    arguments as well as construct and provide meaningful help and feedback
+    should bad data be entered or help be requested. By doing this we'll
+    automatically get a traditional usage message as well as a help
+    response.
+
+    Args:
+        rawArgs:        The arguments as obtained from the command line.
+                        Normally this is left at None unless one wants to
+                        load in values for unit testing.
+        defaultFilter:  The formats of stories to display and process.
+
+    Returns:
+        A list of legal formats to use for stories.
+    """
+    # Ensure the types we're fed make sense.
+    assert rawArgs is None or isinstance(rawArgs, list)
+    assert isinstance(defaultFilter, str)
+    # Use the Python argparser to parse command line input and provide
+    # usage information and feedback should bad input be given or help
+    # requested.
+    parser = ArgumentParser(
+        description="An interactive fiction story downloader that works, "
+                    "er, interactively."
+    )
+    parser.add_argument(
+        '--formats', '-f', default=defaultFilter, nargs='?',
+        help='All the formats to process, space-separated. By default '
+             'this is "{0}".'.format(defaultFilter)
+    )
+    parser.add_argument(
+        '--library', '-l', default=defaultLib, nargs='?',
+        help='The location in which to store stories. By default '
+             'this is "{0}".'.format(defaultLib)
+    )
+    args = parser.parse_args(rawArgs)
+    return args.library, args.formats.split()
 
 
 class IFArchiveHTMLParser(HTMLParser):
@@ -48,7 +93,7 @@ class IFArchiveHTMLParser(HTMLParser):
     # The IF Archive supports a ton of different IF formats. These
     # are the extensions that it uses that we support.
     legalExtensions = (
-        '.z5', '.z6', '.z8', '.zblorb', '.zlb',
+        '.z5', '.z6', '.z8', '.zco', '.zblorb', '.zlb',
         '.ulx', '.gblorb', '.blb', '.blb'
         '.gam', '.t3',
         '.acd', '.a3c', '.a3r',
@@ -589,6 +634,8 @@ def main(scr, storyDict, typeFilter=__story_types__,
                   "and enter when done.")
     storiesAlreadyDownloaded = listdir(storyFolder)
     selections = sorted(storyDict.keys(), key=lambda sel: sel.lower())
+    selections = [selection for selection in selections
+                  if storyDict[selection].get('type') in typeFilter]
     selectionAreaWidth = maxX / 2
     selectionAreaTop = 3
     selectionAreaHeight = maxY - selectionAreaTop - 1
@@ -598,13 +645,12 @@ def main(scr, storyDict, typeFilter=__story_types__,
     selectionPad.scrollok(True)
     colStart = 0
     for selection in selections:
-        if storyDict[selection].get('type') in typeFilter:
-            selectionPad.scroll()
-            if storyDict[selection].get('selected', False) or \
-               selection in storiesAlreadyDownloaded:
-                selectionPad.addstr(len(selections) - 1, 0, '✓', A_BOLD)
-            selectionPad.addnstr(len(selections) - 1, checkBoxWidth, selection,
-                                 maxX - checkBoxWidth)
+        selectionPad.scroll()
+        if storyDict[selection].get('selected', False) or \
+           selection in storiesAlreadyDownloaded:
+            selectionPad.addstr(len(selections) - 1, 0, '✓', A_BOLD)
+        selectionPad.addnstr(len(selections) - 1, checkBoxWidth, selection,
+                             maxX - checkBoxWidth)
     descArea = scr.subwin(3, selectionAreaWidth + 2)
     scr.refresh()
     done = False
@@ -661,6 +707,7 @@ def main(scr, storyDict, typeFilter=__story_types__,
 # exist), interacts with the user to choose some stories, and downloads any
 # chosen ones that haven't already been downloaded.
 if __name__ == '__main__':
+    __story_folder__, __story_types__ = parseCommandLine()
     # Ensure the story folder exists.
     try:
         mkdir(__story_folder__, 0755)

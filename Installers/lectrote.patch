@@ -1,0 +1,11 @@
+--- cli.sh	2017-04-05 21:46:43.000000000 -0400
++++ cli.sh.new	2017-04-23 14:51:37.814498890 -0400
+@@ -6,7 +6,7 @@
+ 
+ PREFIX="`npm prefix`"
+ 
+-if /bin/test "`basename $PREFIX`" "!=" "lectrote";
++if /usr/bin/test "`basename $PREFIX`" "!=" "lectrote";
+ then
+   LIB="`npm root -g`";
+   PREFIX="$LIB/lectrote";
