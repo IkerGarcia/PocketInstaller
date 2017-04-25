@@ -126,20 +126,20 @@ if test -f ~/ZEsarUX-4.1/scrsdl.c; then
 else
   P17="ZEsarUX|Installers/zesarux.sh"
 fi
-if test -f ~/infocom/ZORK1.DAT; then
+if hash gargoyle-free 2>/dev/null; then
   : 
 else 
-  P18="Zork|Installers/zork.sh"
+  P18="GargoyleInstallers/lectrote.sh"
 fi
-if test -f ~/infocom/HHGTTG.DAT; then
-  :
-else
-  P19="Hitchhiker's...|Installers/hhgttg.sh"
+if hash lectrote 2>/dev/null; then
+  : 
+else 
+  P19="LectroteInstallers/lectrote.sh"
 fi
 if test -f ~/.pocket-home/.version; then
   :
 else
-  P20="PocketHome(Marshmallow)|Installers/pockethome.sh"
+  P19="PocketHome(Marshmallow)|Installers/pockethome.sh"
 fi
 
 menu=($P1 $P2 $P3 $P4 $P5 $P6 $P7 $P8 $P9 $P10 $P11 $P12 $P13 $P14 $P15 $P16 $P17 $P18 $P19 $P20)
