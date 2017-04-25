@@ -138,4 +138,15 @@ Thanks to Gustavo H M Silva (@gustavohmsilva) for the inspiration to add HHGTTG 
 
 Minor changes to HHGTTG and Zork (remote filenames).
 
+**v3.12**
+
+Gargoyle added.
+
+Frotz removed.
+
+Lectrote added.
+
+Zoom improved.
+
+Thanks to Eric W. Brown (@Feneric) for these contributions.
 

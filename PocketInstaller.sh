@@ -129,17 +129,17 @@ fi
 if hash gargoyle-free 2>/dev/null; then
   : 
 else 
-  P18="GargoyleInstallers/lectrote.sh"
+  P18="Gargoyle|Installers/lectrote.sh"
 fi
 if hash lectrote 2>/dev/null; then
   : 
 else 
-  P19="LectroteInstallers/lectrote.sh"
+  P19="Lectrote|Installers/lectrote.sh"
 fi
 if test -f ~/.pocket-home/.version; then
   :
 else
-  P19="PocketHome(Marshmallow)|Installers/pockethome.sh"
+  P20="PocketHome(Marshmallow)|Installers/pockethome.sh"
 fi
 
 menu=($P1 $P2 $P3 $P4 $P5 $P6 $P7 $P8 $P9 $P10 $P11 $P12 $P13 $P14 $P15 $P16 $P17 $P18 $P19 $P20)
