@@ -129,7 +129,7 @@ fi
 if hash gargoyle-free 2>/dev/null; then
   : 
 else 
-  P18="Gargoyle|Installers/lectrote.sh"
+  P18="Gargoyle|Installers/gargoyle.sh"
 fi
 if hash lectrote 2>/dev/null; then
   : 

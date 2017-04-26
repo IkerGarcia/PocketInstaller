@@ -150,3 +150,8 @@ Zoom improved.
 
 Thanks to Eric W. Brown (@Feneric) for these contributions.
 
+**v3.13**
+
+Documentation added. 
+
+Bug fixes.
