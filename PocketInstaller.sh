@@ -10,6 +10,12 @@ exec &> >(tee -a log.txt)
 
 sudo apt-mark hold -qq  pocket-home
 
+echo "Looking for updates"
+wget -O /tmp/package.txt 'http://pocketinstaller.damianvila.com/package.txt'
+cat /tmp/package.txt | head -1 > /tmp/version
+cat /tmp/package.txt | tail -1 > /tmp/link
+(diff /tmp/version /home/chip/.PocketInstaller/.version && echo 'Already up-to-date.') || exec ./update.sh
+
 if hash zenity 2>/dev/null; then
   :
 else

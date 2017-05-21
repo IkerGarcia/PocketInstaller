@@ -155,3 +155,9 @@ Thanks to Eric W. Brown (@Feneric) for these contributions.
 Documentation added. 
 
 Bug fixes.
+
+**v4.0**
+
+PocketInstaller automatically updates if needed. Bugs can be found, please report.
+
+BSDGames install improved. Thanks to Eric W. Brown (@Generic) for this contribution.

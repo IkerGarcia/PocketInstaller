@@ -39,7 +39,7 @@ Special thanks to [Aaron Turner](https://github.com/torch2424), for adding PCSX.
 
 Special thanks to Scott Baeder and Tyler Steele for reporting bugs and testing to find the fix.
 
-Special thanks to [Eric W. Brown](https://github.com/Feneric), for adding Zoom and the appropiate shebang to the scripts, including Freedroid and XU4, normalized icons. Also for adding the documentation and guides for Freedroid, XU4 and Zoom. Also for adding Gargoyle and Lectrote, removing Frotz and improving Zoom.
+Special thanks to [Eric W. Brown](https://github.com/Feneric), for adding Zoom and the appropiate shebang to the scripts, including Freedroid and XU4, normalized icons. Also for adding the documentation and guides for Freedroid, XU4 and Zoom. Also for adding Gargoyle and Lectrote, removing Frotz and improving Zoom. Also for improving the BSDGames install.
 
 Special thanks to [Tarjei Tjonn](https://github.com/CaptainZalo) for debugging all the scripts and creating the one for Minecraft. Also for hosting the files for Zork and The Hitchhiker's Guide to the Galaxy (HHGTTG) and creating the installation script. Excuse me for the typo in your name!
 
