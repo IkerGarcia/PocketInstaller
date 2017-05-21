@@ -86,7 +86,7 @@ if hash zoom 2>/dev/null; then
 else
   P9="Zoom(Z-machine)|Installers/zoom.sh"
 fi
-if test -f /usr/games/adventure || test -f /usr/games/bsdgames/adventure; then
+if dpkg-query -s bsdgames &>> /dev/null; then
   :
 else
   P10="BSDgames|Installers/bsd.sh"
