@@ -64,3 +64,8 @@ https://bbs.nextthing.co/t/pocket-home-marshmallow-edition/6579
 
 ~~Config files (with resolution, keys mapped, etc.) can be found in the Configuration folder. Just replace the original ones with this versions.
 
+**Documentation**
+
+Some of the games feature getting started guides. These can be viewed in place with a Web browser, or can be installed
+on your PocketC.H.I.P. where they'll be integrated in with your regular Getting Started Help. To install these, run
+./InstallDocs.py from within the Documentation directory.

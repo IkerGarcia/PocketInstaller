@@ -10,6 +10,12 @@ exec &> >(tee -a log.txt)
 
 sudo apt-mark hold -qq  pocket-home
 
+echo "Looking for updates"
+wget -O /tmp/package.txt 'http://pocketinstaller.damianvila.com/package.txt'
+cat /tmp/package.txt | head -1 > /tmp/version
+cat /tmp/package.txt | tail -1 > /tmp/link
+(diff /tmp/version /home/chip/.PocketInstaller/.version && echo 'Already up-to-date.') || exec ./update.sh
+
 if hash zenity 2>/dev/null; then
   :
 else
@@ -86,7 +92,7 @@ if hash zoom 2>/dev/null; then
 else
   P9="Zoom(Z-machine)|Installers/zoom.sh"
 fi
-if test -f /usr/games/adventure || test -f /usr/games/bsdgames/adventure; then
+if dpkg-query -s bsdgames &>> /dev/null; then
   :
 else
   P10="BSDgames|Installers/bsd.sh"
@@ -116,13 +122,33 @@ if hash freedroid 2>/dev/null; then
 else
   P15="Freedroid|Installers/freedroid.sh"
 fi
+if test -f ~/ColEm/ColEm.c; then
+  : 
+else
+  P16="ColEm|Installers/colem.sh"
+fi
+if test -f ~/ZEsarUX-4.1/scrsdl.c; then
+  :
+else
+  P17="ZEsarUX|Installers/zesarux.sh"
+fi
+if hash gargoyle-free 2>/dev/null; then
+  : 
+else 
+  P18="Gargoyle|Installers/gargoyle.sh"
+fi
+if hash lectrote 2>/dev/null; then
+  : 
+else 
+  P19="Lectrote|Installers/lectrote.sh"
+fi
 if test -f ~/.pocket-home/.version; then
   :
 else
-  P16="PocketHome(Marshmallow)|Installers/pockethome.sh"
+  P20="PocketHome(Marshmallow)|Installers/pockethome.sh"
 fi
 
-menu=($P1 $P2 $P3 $P4 $P5 $P6 $P7 $P8 $P9 $P10 $P11 $P12 $P13 $P14 $P15 $P16)
+menu=($P1 $P2 $P3 $P4 $P5 $P6 $P7 $P8 $P9 $P10 $P11 $P12 $P13 $P14 $P15 $P16 $P17 $P18 $P19 $P20)
 
 yad_opts=(--form
 --scroll

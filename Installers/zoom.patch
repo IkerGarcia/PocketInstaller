@@ -1,16 +1,68 @@
 # Zoom doesn't get the PocketCHIP screen size right via its query.
-# Applying this patch forces it to be correct.
-*** src/menu.c	2011-11-05 07:40:53.000000000 -0400
---- src/menu.c.new	2016-12-24 20:38:08.300031582 -0500
-***************
-*** 151,156 ****
---- 151,159 ----
-    qsort(game, n_games, sizeof(struct game_struct), game_compare);
-  
-    selection = 0;
-+   di = display_get_info();
-+   di->lines = 18;
-+   di->columns = 50;
-    height = (di->lines-6)&~1;
-    sprintf(format, " %%.%is ", di->columns-6);
-  
+# Applying this patch forces it to be correct. This patch also fixes
+# the bug that prevents Zoom from seeing Z-Machine Blorb files as
+# valid options, and sets /usr/local/share/IF as the default place
+# to look for interactive fiction.
+diff -rupN src/menu.c src.new/menu.c
+--- src/menu.c	2011-11-05 07:40:53.000000000 -0400
++++ src.new/menu.c	2017-04-23 13:56:48.226631933 -0400
+@@ -94,13 +94,26 @@ char* menu_get_story(void)
+   /* Read the files in this directory, and work out their names */
+   while ((dent=readdir(gamedir)))
+     {
+-      int len;
++      int len, gotBlorb, extLen;
+ 
+       len = strlen(dent->d_name);
+-      
++      extLen = 3; 
++      gotBlorb = 0; 
+       if (len > 2)
+ 	{
+-	  if (dent->d_name[len-2] == 'z' && dent->d_name[len-3]=='.')
++          if (len>3 && dent->d_name[len-4]=='.' && dent->d_name[len-3]=='z' &&
++              (dent->d_name[len-2]=='c' || dent->d_name[len-2]=='l') &&
++              (dent->d_name[len-1]=='o' || dent->d_name[len-1]=='b')) {
++            gotBlorb = 1;
++            extLen = 4;
++          }
++          if (len>6 && dent->d_name[len-7]=='.' && dent->d_name[len-6]=='z' &&
++              dent->d_name[len-5]=='b' && dent->d_name[len-4]=='l' &&
++              dent->d_name[len-3]=='o' && dent->d_name[len-2]=='r') {
++            gotBlorb = 1;
++            extLen = 7;
++          }
++	  if (gotBlorb || dent->d_name[len-2]=='z' && dent->d_name[len-3]=='.')
+ 	    {
+ 	      ZFile* file;
+ 
+@@ -128,7 +141,7 @@ char* menu_get_story(void)
+ 		      len = strlen(game[n_games].filename);
+ 		      
+ 		      game[n_games].storyname = malloc(len+1);
+-		      for (x=0; x<len-3; x++)
++		      for (x=0; x<len-extLen; x++)
+ 			{
+ 			  game[n_games].storyname[x] =
+ 			    game[n_games].filename[x];
+@@ -151,6 +164,9 @@ char* menu_get_story(void)
+   qsort(game, n_games, sizeof(struct game_struct), game_compare);
+ 
+   selection = 0;
++  di = display_get_info();
++  di->lines = 18;
++  di->columns = 50;
+   height = (di->lines-6)&~1;
+   sprintf(format, " %%.%is ", di->columns-6);
+ 
+diff -rupN src/rc.c src.new/rc.c
+--- src/rc.c	2011-11-05 07:40:53.000000000 -0400
++++ src.new/rc.c	2017-04-22 20:52:09.302334994 -0400
+@@ -47,6 +47,7 @@ rc_game*        rc_defgame = NULL;
+ # define ZOOMRC "zoomrc"
+ # define GAMEDIR NULL
+ #endif
++# define GAMEDIR "/usr/local/share/IF"
+ 
+ void rc_error(char* erm)
+ {

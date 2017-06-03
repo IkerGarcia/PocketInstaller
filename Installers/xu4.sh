@@ -1,6 +1,7 @@
 #!/bin/bash
 # Install XU4: play classic Ultima IV on current hardware
-sudo apt-get install subversion libxml2-dev libsdl-mixer1.2-dev
+sudo apt-get update
+sudo apt-get install -y subversion libxml2-dev libsdl-mixer1.2-dev
 svn checkout https://svn.code.sf.net/p/xu4/code/trunk /home/chip/xu4-code
 cp -p xu4.patch /home/chip/xu4-code/u4/src
 cd /home/chip/xu4-code/u4/src
