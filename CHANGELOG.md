@@ -161,3 +161,9 @@ Bug fixes.
 PocketInstaller automatically updates if needed. Bugs can be found, please report.
 
 BSDGames install improved. Thanks to Eric W. Brown (@Generic) for this contribution.
+
+**v4.1**
+
+Bugs fixed.
+
+Thanks to Jin Yeom (@jinyeom) and @claycooper for this contribution.
