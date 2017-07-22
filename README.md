@@ -47,6 +47,10 @@ Special thanks to Alfred for reporting bugs.
 
 Special thanks to [Gustavo H M Silva](https://github.com/gustavohmsilva) for the inspiration to add HHGTTG and Zork.
 
+Special thanks to [Jin Yeom] (https://github.com/jinyeom) for fixing permission bug.
+
+Special thanks to [Clay Cooper] (https://github.com/claycooper) for fixing line breaks.
+
 **License** 
 
 This project is licensed under the MIT license (read License file). Of course, this license affects only to the parts we have created, all the other tools (YAD, Zenity, Pocket Home and so on) hold their own license. Regarding to us, share, collaborate and enjoy!
