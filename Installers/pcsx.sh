@@ -1,5 +1,7 @@
 #!/bin/bash
 
+zenity --info --timeout=2 --text="Installing PCSX..."
+
 sudo apt-get install -y git build-essential libsdl1.2-dev
 
 sudo git clone https://github.com/notaz/pcsx_rearmed.git /home/chip/pcsx_rearmed
@@ -17,4 +19,14 @@ sudo chmod +x pcsx
 
 sudo cp pcsx /usr/local/bin
 
+# PCSX icon
+if test -f ~/.pocket-home/.version; then
+  IS_ICON_PRESENT=`jq '.pages[0] | .items[] | select(.name == "PCSX")' ~/.pocket-home/config.json`
+  if [ -z ${IS_ICON_PRESENT} ]
+  then
+    jq '(.pages[0] | .items) |= . + [{ "name": "PCSX", "icon": "~/PocketInstaller/Icons/pcsx.png", "shell": "pcsx" }]' ~/.pocket-home/config.json > tmp.$$.json
+    mv tmp.$$.json ~/.pocket-home/config.json
+  fi
+fi
 
+zenity --info --timeout=2 --text="PCSX installed!"

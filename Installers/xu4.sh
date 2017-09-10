@@ -1,4 +1,7 @@
 #!/bin/bash
+
+zenity --info --timeout=2 --text="Installing XU4 (Ultima IV)..."
+
 # Install XU4: play classic Ultima IV on current hardware
 sudo apt-get update
 sudo apt-get install -y subversion libxml2-dev libsdl-mixer1.2-dev
@@ -15,3 +18,14 @@ sudo mv ultima4.zip u4upgrad.zip /usr/local/lib/u4
 # Clean up when we're done
 rm -rf /home/chip/xu4-code
 
+# XU4 icon
+if test -f ~/.pocket-home/.version; then
+  IS_ICON_PRESENT=`jq '.pages[0] | .items[] | select(.name == "XU4")' ~/.pocket-home/config.json`
+  if [ -z ${IS_ICON_PRESENT} ]
+  then
+    jq '(.pages[0] | .items) |= . + [{ "name": "XU4", "icon": "~/PocketInstaller/Icons/xu4.png", "shell": "/home/chip/PocketInstaller/Launchers/xu4.sh" }]' ~/.pocket-home/config.json > tmp.$$.json
+    mv tmp.$$.json ~/.pocket-home/config.json
+  fi
+fi
+
+zenity --info --timeout=2 --text="XU4 (Ultima IV) installed!"

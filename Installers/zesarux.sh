@@ -1,5 +1,7 @@
 #!/bin/bash
 
+zenity --info --timeout=2 --text="Installing ZEsarUX..."
+
 # Update and install dependencies
 sudo apt-get update
 sudo apt-get install -y gcc g++ libsdl1.2-dev libsdl-image1.2-dev libsdl-mixer1.2-dev libsdl-ttf2.0-dev
@@ -29,6 +31,14 @@ chmod +x configure
 make clean
 make
 
+# ZEsarUX icon
+if test -f ~/.pocket-home/.version; then
+  IS_ICON_PRESENT=`jq '.pages[0] | .items[] | select(.name == "ZEsarUX")' ~/.pocket-home/config.json`
+  if [ -z ${IS_ICON_PRESENT} ]
+  then
+    jq '(.pages[0] | .items) |= . + [{ "name": "ZEsarUX", "icon": "~/PocketInstaller/Icons/zesarux.png", "shell": "/home/chip/zesarux" }]' ~/.pocket-home/config.json > tmp.$$.json
+    mv tmp.$$.json ~/.pocket-home/config.json
+  fi
+fi
 
-
-
+zenity --info --timeout=2 --text="ZEsarUX installed!"

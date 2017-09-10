@@ -1,5 +1,7 @@
 #!/bin/bash
 
+zenity --info --timeout=2 --text="Installing RetroArch..."
+
 cd ~
 
 sudo apt-get update
@@ -15,12 +17,21 @@ sudo make install
 
 mkdir ~/.config/retroarch && cp ~/PocketInstaller/Configuration/retroarch.cfg ~/.config/retroarch/retroarch.cfg
 
-cd 
+cd
 
 git clone https://github.com/libretro/gambatte-libretro.git
 cd ~/gambatte-libretro
 
 make -f Makefile.libretro
 
+# RetroArch icon
+if test -f ~/.pocket-home/.version; then
+  IS_ICON_PRESENT=`jq '.pages[0] | .items[] | select(.name == "RetroArch")' ~/.pocket-home/config.json`
+  if [ -z ${IS_ICON_PRESENT} ]
+  then
+    jq '(.pages[0] | .items) |= . + [{ "name": "RetroArch", "icon": "~/PocketInstaller/Icons/retroarch.png", "shell": "retroarch" }]' ~/.pocket-home/config.json > tmp.$$.json
+    mv tmp.$$.json ~/.pocket-home/config.json
+  fi
+fi
 
-
+zenity --info --timeout=2 --text="RetroArch installed!"

@@ -1,4 +1,7 @@
 #!/bin/bash
+
+zenity --info --timeout=2 --text="Installing Lectrote..."
+
 # Install Lectrote: interactive fiction parser for Z-machine, Glulx, & Hugo
 CHIP_STORY_LOCATION=/usr/local/share/IF
 sudo mkdir -p -m 775 "$CHIP_STORY_LOCATION"
@@ -21,3 +24,14 @@ sudo npm install -g
 # Clean up when we're done
 rm -rf /home/chip/lectrote-lectrote-1.2.5
 
+# Lectrote icon
+if test -f ~/.pocket-home/.version; then
+  IS_ICON_PRESENT=`jq '.pages[0] | .items[] | select(.name == "Lectrote")' ~/.pocket-home/config.json`
+  if [ -z ${IS_ICON_PRESENT} ]
+  then
+    jq '(.pages[0] | .items) |= . + [{ "name": "Lectrote", "icon": "~/PocketInstaller/Icons/lectrote.png", "shell": "lectrote" }]' ~/.pocket-home/config.json > tmp.$$.json
+    mv tmp.$$.json ~/.pocket-home/config.json
+  fi
+fi
+
+zenity --info --timeout=2 --text="Lectrote installed!"
