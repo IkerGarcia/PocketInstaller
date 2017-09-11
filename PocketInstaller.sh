@@ -47,6 +47,12 @@ else
   echo "#key added" | sudo tee -a /etc/apt/sources.list
 fi
 
+# Check for Pocket Home to correct config.json (might not be necessary.)
+# if test -f ~/.pocket-home/.version; then
+#   sed 's/},\s*]/}\n]/' ~/.pocket-home/config.json > tmp.$$.json
+#   mv tmp.$$.json ~/.pocket-home/config.json
+# fi
+
 if hash mednafen 2>/dev/null; then
   :
 else
