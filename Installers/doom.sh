@@ -1,6 +1,6 @@
 #!/bin/bash
 
-zenity --info --timeout=2 --text="Installing Doom..."
+echo "Installing Doom. This make take a while. Please be patient..."
 
 sudo apt-get install -y prboom doom-wad-shareware
 
@@ -14,4 +14,4 @@ if test -f ~/.pocket-home/.version; then
   fi
 fi
 
-zenity --info --timeout=2 --text="Doom installed!"
+echo "Doom installed!"

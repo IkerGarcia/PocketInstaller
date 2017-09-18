@@ -1,6 +1,6 @@
 #!/bin/bash
 
-zenity --info --timeout=2 --text="Installing ScummVM..."
+echo "Installing ScummVM. This make take a while. Please be patient..."
 
 sudo apt-get install -y scummvm
 
@@ -14,4 +14,4 @@ if test -f ~/.pocket-home/.version; then
   fi
 fi
 
-zenity --info --timeout=2 --text="ScummVM installed!"
+echo "ScummVM installed!"

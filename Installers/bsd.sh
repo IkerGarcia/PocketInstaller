@@ -1,6 +1,6 @@
 #!/bin/bash
 
-zenity --info --timeout=2 --text="Installing BSD Games..."
+echo "Installing BSD Games. This make take a while. Please be patient..."
 
 sudo apt-get install -y bsdgames bsdgames-nonfree
 
@@ -14,4 +14,4 @@ if test -f ~/.pocket-home/.version; then
   fi
 fi
 
-zenity --info --timeout=2 --text="BSD Games installed!"
+echo "BSD Games installed!"

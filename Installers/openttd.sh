@@ -1,6 +1,6 @@
 #!/bin/bash
 
-zenity --info --timeout=2 --text="Installing OpenTTD..."
+echo "Installing OpenTTD. This make take a while. Please be patient..."
 
 sudo apt-get install -y openttd
 
@@ -14,4 +14,4 @@ if test -f ~/.pocket-home/.version; then
   fi
 fi
 
-zenity --info --timeout=2 --text="OpenTTD installed!"
+echo "OpenTTD installed!"

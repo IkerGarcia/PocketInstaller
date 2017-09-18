@@ -1,6 +1,6 @@
 #!/bin/bash
 
-zenity --info --timeout=2 --text="Installing Lectrote..."
+echo "Installing Lectrote. This make take a while. Please be patient..."
 
 # Install Lectrote: interactive fiction parser for Z-machine, Glulx, & Hugo
 CHIP_STORY_LOCATION=/usr/local/share/IF
@@ -34,4 +34,4 @@ if test -f ~/.pocket-home/.version; then
   fi
 fi
 
-zenity --info --timeout=2 --text="Lectrote installed!"
+echo "Lectrote installed!"

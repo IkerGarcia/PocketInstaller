@@ -1,6 +1,6 @@
 #!/bin/bash
 
-zenity --info --timeout=2 --text="Installing Gargoyle..."
+echo "Installing Gargoyle. This make take a while. Please be patient..."
 
 # Install Gargoyle: interactive fiction parser for many formats
 CHIP_STORY_LOCATION=/usr/local/share/IF
@@ -20,4 +20,4 @@ if test -f ~/.pocket-home/.version; then
   fi
 fi
 
-zenity --info --timeout=2 --text="Gargoyle installed!"
+echo "Gargoyle installed!"

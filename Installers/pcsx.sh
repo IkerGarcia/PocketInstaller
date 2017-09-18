@@ -1,6 +1,6 @@
 #!/bin/bash
 
-zenity --info --timeout=2 --text="Installing PCSX..."
+echo "Installing PCSX. This make take a while. Please be patient..."
 
 sudo apt-get install -y git build-essential libsdl1.2-dev
 
@@ -29,4 +29,4 @@ if test -f ~/.pocket-home/.version; then
   fi
 fi
 
-zenity --info --timeout=2 --text="PCSX installed!"
+echo "PCSX installed!"

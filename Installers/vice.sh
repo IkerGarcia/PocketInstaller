@@ -1,6 +1,6 @@
 #!/bin/bash
 
-zenity --info --timeout=2 --text="Installing VICE..."
+echo "Installing VICE. This make take a while. Please be patient..."
 
 sudo apt-get install -y vice
 
@@ -27,4 +27,4 @@ if test -f ~/.pocket-home/.version; then
   fi
 fi
 
-zenity --info --timeout=2 --text="VICE installed!"
+echo "VICE installed!"

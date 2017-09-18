@@ -1,6 +1,6 @@
 #!/bin/bash
 
-zenity --info --timeout=2 --text="Installing DosBox..."
+echo "Installing DosBox. This make take a while. Please be patient..."
 
 sudo apt-get install -y dosbox
 
@@ -14,4 +14,4 @@ if test -f ~/.pocket-home/.version; then
   fi
 fi
 
-zenity --info --timeout=2 --text="DosBox installed!"
+echo "DosBox installed!"

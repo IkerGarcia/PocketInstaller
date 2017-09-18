@@ -189,7 +189,7 @@ if test -f ~/.pocket-home/.version; then
     jq '(.pages[0] | .items) |= . + [{ "name": "Pocket Installer", "icon": "~/PocketInstaller/desktopicon.png", "shell": "vala-terminal -fs 8 -g 20 20 -e ~/PocketInstaller/PocketInstaller.sh" }]' ~/.pocket-home/config.json > tmp.$$.json
     mv tmp.$$.json ~/.pocket-home/config.json
   fi
-  zenity --info --text="Restarting Pocket-Home to show new software."
+  zenity --info --text="Restart Pocket-Home to show icons for new software."
   killall pocket-home && nohup pocket-home &
 fi
 

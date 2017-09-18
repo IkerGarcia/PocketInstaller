@@ -1,6 +1,6 @@
 #!/bin/bash
 
-zenity --info --timeout=2 --text="Installing GnGeo..."
+echo "Installing GnGeo. This make take a while. Please be patient..."
 
 sudo wget -O /tmp/gngeo.tar.gz https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/gngeo/gngeo-0.8.tar.gz
 sudo tar -zxvf /tmp/gngeo.tar.gz -C /home/chip/
@@ -22,4 +22,4 @@ if test -f ~/.pocket-home/.version; then
   fi
 fi
 
-zenity --info --timeout=2 --text="GnGeo installed!"
+echo "GnGeo installed!"

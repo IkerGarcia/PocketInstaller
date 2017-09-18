@@ -1,6 +1,6 @@
 #!/bin/bash
 
-zenity --info --timeout=2 --text="Installing OpenArena (Quake 3)..."
+echo "Installing OpenArena (Quake 3). This make take a while. Please be patient..."
 
 sudo apt-get update
 sudo apt-get install -y git
@@ -23,4 +23,4 @@ if test -f ~/.pocket-home/.version; then
   fi
 fi
 
-zenity --info --timeout=2 --text="OpenArena (Quake 3) installed!"
+echo "OpenArena (Quake 3) installed!"

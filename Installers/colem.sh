@@ -1,6 +1,6 @@
 #!/bin/bash
 
-zenity --info --timeout=2 --text="Installing ColEm..."
+echo "Installing ColEm. This make take a while. Please be patient..."
 
 # Update and install dependencies
 sudo apt-get update
@@ -34,4 +34,4 @@ if test -f ~/.pocket-home/.version; then
   fi
 fi
 
-zenity --info --timeout=2 --text="ColEm installed!"
+echo "ColEm installed!"

@@ -1,6 +1,6 @@
 #!/bin/bash
 
-zenity --info --timeout=2 --text="Installing ZEsarUX..."
+echo "Installing ZEsarUX. This make take a while. Please be patient..."
 
 # Update and install dependencies
 sudo apt-get update
@@ -41,4 +41,4 @@ if test -f ~/.pocket-home/.version; then
   fi
 fi
 
-zenity --info --timeout=2 --text="ZEsarUX installed!"
+echo "ZEsarUX installed!"

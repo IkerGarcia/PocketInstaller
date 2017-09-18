@@ -1,6 +1,6 @@
 #!/bin/bash
 
-zenity --info --timeout=2 --text="Installing Mednafen..."
+echo "Installing Mednafen. This make take a while. Please be patient..."
 
 sudo apt-get install -y mednafen libsdl2-dev
 
@@ -25,4 +25,4 @@ if test -f ~/.pocket-home/.version; then
   fi
 fi
 
-zenity --info --timeout=2 --text="Mednafen installed!"
+echo "Mednafen installed!"

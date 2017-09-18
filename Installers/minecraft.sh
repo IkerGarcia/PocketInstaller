@@ -1,6 +1,6 @@
 #!/bin/bash
 
-zenity --info --timeout=2 --text="Installing Minecraft..."
+echo "Installing Minecraft. This make take a while. Please be patient..."
 
 # Zeroing working dir.
 cd ~
@@ -36,4 +36,4 @@ if test -f ~/.pocket-home/.version; then
   fi
 fi
 
-zenity --info --timeout=2 --text="Minecraft installed!"
+echo "Minecraft installed!"
