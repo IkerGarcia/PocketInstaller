@@ -12,4 +12,3 @@ sudo apt-mark hold -qq pocket-home
 
 zenity --info --text="Pocket Home (Marshmallow edition) installed, reboot needed"
 sudo reboot
-

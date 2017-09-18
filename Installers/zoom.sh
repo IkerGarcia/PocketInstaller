@@ -1,4 +1,7 @@
 #!/bin/bash
+
+echo "Installing Zoom. This make take a while. Please be patient..."
+
 # Install Zoom: interactive fiction parser for Z-machine
 CHIP_STORY_LOCATION=/usr/local/share/IF
 ZOOM_STORY_LOCATION=/usr/local/share/zoom/games
@@ -24,3 +27,14 @@ sudo make install-strip
 # Clean up when we're done
 rm -rf /home/chip/zoom-1.1.5
 
+# Zoom icon
+if test -f ~/.pocket-home/.version; then
+  IS_ICON_PRESENT=`jq '.pages[0] | .items[] | select(.name == "Zoom")' ~/.pocket-home/config.json`
+  if [ -z ${IS_ICON_PRESENT} ]
+  then
+    jq '(.pages[0] | .items) |= . + [{ "name": "Zoom", "icon": "~/PocketInstaller/Icons/zoom.png", "shell": "zoom" }]' ~/.pocket-home/config.json > tmp.$$.json
+    mv tmp.$$.json ~/.pocket-home/config.json
+  fi
+fi
+
+echo "Zoom installed!"
