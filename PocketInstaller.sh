@@ -183,10 +183,10 @@ done
 
 # Icon for Pocket Installer
 if test -f ~/.pocket-home/.version; then
-  IS_ICON_PRESENT=`jq '.pages[0] | .items[] | select(.name == "Pocket Installer")' ~/.pocket-home/config.json`
+  IS_ICON_PRESENT=`jq '.pages[0] | .items[] | select(.name == "PocketInstaller")' ~/.pocket-home/config.json`
   if [ -z ${IS_ICON_PRESENT} ]
   then
-    jq '(.pages[0] | .items) |= . + [{ "name": "Pocket Installer", "icon": "~/PocketInstaller/desktopicon.png", "shell": "vala-terminal -fs 8 -g 20 20 -e ~/PocketInstaller/PocketInstaller.sh" }]' ~/.pocket-home/config.json > tmp.$$.json
+    jq '(.pages[0] | .items) |= . + [{ "name": "PocketInstaller", "icon": "~/PocketInstaller/desktopicon.png", "shell": "vala-terminal -fs 8 -g 20 20 -e ~/PocketInstaller/PocketInstaller.sh" }]' ~/.pocket-home/config.json > tmp.$$.json
     mv tmp.$$.json ~/.pocket-home/config.json
   fi
   zenity --info --text="Restart Pocket-Home to show icons for new software."
