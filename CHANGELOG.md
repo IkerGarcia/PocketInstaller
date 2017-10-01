@@ -167,3 +167,9 @@ BSDGames install improved. Thanks to Eric W. Brown (@Generic) for this contribut
 Bugs fixed.
 
 Thanks to Jin Yeom (@jinyeom) and @claycooper for this contribution.
+
+**v5.0**
+
+Desktop icons are created automatically if Pocket Home Marshmallow Edition is already installed.
+
+PocketInstaller is now also more user friendly.
