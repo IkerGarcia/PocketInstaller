@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo "Installing DosBox. This make take a while. Please be patient..."
+echo "Installing DosBox. This may take a while. Please be patient..."
 
 sudo apt-get install -y dosbox
 
@@ -14,4 +14,4 @@ if test -f ~/.pocket-home/.version; then
   fi
 fi
 
-echo "DosBox installed!"
+echo "DosBox installed! Have fun!"

@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo "Installing RetroArch. This make take a while. Please be patient..."
+echo "Installing RetroArch. This may take a while. Please be patient..."
 
 cd ~
 
@@ -34,4 +34,4 @@ if test -f ~/.pocket-home/.version; then
   fi
 fi
 
-echo "RetroArch installed!"
+echo "RetroArch installed! Have fun!"

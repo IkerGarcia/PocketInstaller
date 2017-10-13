@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo "Installing Gargoyle. This make take a while. Please be patient..."
+echo "Installing Gargoyle. This may take a while. Please be patient..."
 
 # Install Gargoyle: interactive fiction parser for many formats
 CHIP_STORY_LOCATION=/usr/local/share/IF
@@ -20,4 +20,4 @@ if test -f ~/.pocket-home/.version; then
   fi
 fi
 
-echo "Gargoyle installed!"
+echo "Gargoyle installed! Have fun!"

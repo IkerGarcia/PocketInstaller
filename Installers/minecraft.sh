@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo "Installing Minecraft. This make take a while. Please be patient..."
+echo "Installing Minecraft. This may take a while. Please be patient..."
 
 # Zeroing working dir.
 cd ~
@@ -36,4 +36,4 @@ if test -f ~/.pocket-home/.version; then
   fi
 fi
 
-echo "Minecraft installed!"
+echo "Minecraft installed! Have fun!"

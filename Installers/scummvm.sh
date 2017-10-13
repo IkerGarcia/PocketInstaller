@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo "Installing ScummVM. This make take a while. Please be patient..."
+echo "Installing ScummVM. This may take a while. Please be patient..."
 
 sudo apt-get install -y scummvm
 
@@ -14,4 +14,4 @@ if test -f ~/.pocket-home/.version; then
   fi
 fi
 
-echo "ScummVM installed!"
+echo "ScummVM installed! Have fun!"

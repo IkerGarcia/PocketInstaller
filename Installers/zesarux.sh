@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo "Installing ZEsarUX. This make take a while. Please be patient..."
+echo "Installing ZEsarUX. This may take a while. Please be patient..."
 
 # Update and install dependencies
 sudo apt-get update
@@ -41,4 +41,4 @@ if test -f ~/.pocket-home/.version; then
   fi
 fi
 
-echo "ZEsarUX installed!"
+echo "ZEsarUX installed! Have fun!"

@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo "Installing ColEm. This make take a while. Please be patient..."
+echo "Installing ColEm. This may take a while. Please be patient..."
 
 # Update and install dependencies
 sudo apt-get update
@@ -34,4 +34,4 @@ if test -f ~/.pocket-home/.version; then
   fi
 fi
 
-echo "ColEm installed!"
+echo "ColEm installed! Have fun!"

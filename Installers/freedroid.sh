@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo "Installing Freedroid. This make take a while. Please be patient..."
+echo "Installing Freedroid. This may take a while. Please be patient..."
 
 sudo apt-get install -y freedroid
 
@@ -14,4 +14,4 @@ if test -f ~/.pocket-home/.version; then
   fi
 fi
 
-echo "Freedroid installed!"
+echo "Freedroid installed! Have fun!"

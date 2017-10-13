@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo "Installing Zoom. This make take a while. Please be patient..."
+echo "Installing Zoom. This may take a while. Please be patient..."
 
 # Install Zoom: interactive fiction parser for Z-machine
 CHIP_STORY_LOCATION=/usr/local/share/IF
@@ -37,4 +37,4 @@ if test -f ~/.pocket-home/.version; then
   fi
 fi
 
-echo "Zoom installed!"
+echo "Zoom installed! Have fun!"

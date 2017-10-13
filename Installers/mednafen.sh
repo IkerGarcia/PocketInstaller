@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo "Installing Mednafen. This make take a while. Please be patient..."
+echo "Installing Mednafen. This may take a while. Please be patient..."
 
 sudo apt-get install -y mednafen libsdl2-dev
 
@@ -25,4 +25,4 @@ if test -f ~/.pocket-home/.version; then
   fi
 fi
 
-echo "Mednafen installed!"
+echo "Mednafen installed! Have fun!"

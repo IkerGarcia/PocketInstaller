@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo "Installing VICE. This make take a while. Please be patient..."
+echo "Installing VICE. This may take a while. Please be patient..."
 
 sudo apt-get install -y vice
 
@@ -27,4 +27,4 @@ if test -f ~/.pocket-home/.version; then
   fi
 fi
 
-echo "VICE installed!"
+echo "VICE installed! Have fun!"

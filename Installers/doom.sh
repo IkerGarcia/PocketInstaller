@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo "Installing Doom. This make take a while. Please be patient..."
+echo "Installing Doom. This may take a while. Please be patient..."
 
 sudo apt-get install -y prboom doom-wad-shareware
 
@@ -14,4 +14,4 @@ if test -f ~/.pocket-home/.version; then
   fi
 fi
 
-echo "Doom installed!"
+echo "Doom installed! Have fun!"

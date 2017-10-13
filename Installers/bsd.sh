@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo "Installing BSD Games. This make take a while. Please be patient..."
+echo "Installing BSD Games. This may take a while. Please be patient..."
 
 sudo apt-get install -y bsdgames bsdgames-nonfree
 
@@ -14,4 +14,4 @@ if test -f ~/.pocket-home/.version; then
   fi
 fi
 
-echo "BSD Games installed!"
+echo "BSD Games installed! Have fun!"

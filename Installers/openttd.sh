@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo "Installing OpenTTD. This make take a while. Please be patient..."
+echo "Installing OpenTTD. This may take a while. Please be patient..."
 
 sudo apt-get install -y openttd
 
@@ -14,4 +14,4 @@ if test -f ~/.pocket-home/.version; then
   fi
 fi
 
-echo "OpenTTD installed!"
+echo "OpenTTD installed! Have fun!"

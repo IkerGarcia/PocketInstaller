@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo "Installing PCSX. This make take a while. Please be patient..."
+echo "Installing PCSX. This may take a while. Please be patient..."
 
 sudo apt-get install -y git build-essential libsdl1.2-dev
 
@@ -29,4 +29,4 @@ if test -f ~/.pocket-home/.version; then
   fi
 fi
 
-echo "PCSX installed!"
+echo "PCSX installed! Have fun!"

@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo "Installing XU4 (Ultima IV). This make take a while. Please be patient..."
+echo "Installing XU4 (Ultima IV). This may take a while. Please be patient..."
 
 # Install XU4: play classic Ultima IV on current hardware
 sudo apt-get update
@@ -28,4 +28,4 @@ if test -f ~/.pocket-home/.version; then
   fi
 fi
 
-echo "XU4 (Ultima IV) installed!"
+echo "XU4 (Ultima IV) installed! Have fun!"
