@@ -4,6 +4,7 @@ echo "Installing GnGeo. This may take a while. Please be patient..."
 
 # Update and install
 sudo apt-get update
+sudo apt-get install -y build-essential
 
 # Get source code
 sudo wget -O /tmp/gngeo.tar.gz http://pocketinstaller.damianvila.com/gngeo.tar.gz

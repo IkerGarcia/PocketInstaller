@@ -4,7 +4,7 @@ echo "Installing XU4 (Ultima IV). This may take a while. Please be patient..."
 
 # Install XU4: play classic Ultima IV on current hardware
 sudo apt-get update
-sudo apt-get install -y subversion libxml2-dev libsdl-mixer1.2-dev
+sudo apt-get install -y build-essential subversion libxml2-dev libsdl-mixer1.2-dev
 
 # Get code
 svn checkout https://svn.code.sf.net/p/xu4/code/trunk /home/chip/xu4-code
