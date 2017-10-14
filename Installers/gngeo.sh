@@ -2,12 +2,22 @@
 
 echo "Installing GnGeo. This may take a while. Please be patient..."
 
-sudo wget -O /tmp/gngeo.tar.gz https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/gngeo/gngeo-0.8.tar.gz
+# Update and install
+sudo apt-get update
+
+# Get source code
+sudo wget -O /tmp/gngeo.tar.gz http://pocketinstaller.damianvila.com/gngeo.tar.gz
+
+# Untar
 sudo tar -zxvf /tmp/gngeo.tar.gz -C /home/chip/
+
+# Clean up
 sudo rm -r /tmp/gngeo.tar.gz
 
+# Go to build folder
 cd /home/chip/gngeo-0.8
 
+# Build
 sudo ./configure
 sudo make
 sudo make install
@@ -22,4 +32,4 @@ if test -f ~/.pocket-home/.version; then
   fi
 fi
 
-echo "GnGeo installed! Have fun!"
+echo "GnGeo installed. Have fun!"

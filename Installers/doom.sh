@@ -2,6 +2,8 @@
 
 echo "Installing Doom. This may take a while. Please be patient..."
 
+# Update and install
+sudo apt-get update
 sudo apt-get install -y prboom doom-wad-shareware
 
 # Add icons
@@ -14,4 +16,4 @@ if test -f ~/.pocket-home/.version; then
   fi
 fi
 
-echo "Doom installed! Have fun!"
+echo "Doom installed. Have fun!"

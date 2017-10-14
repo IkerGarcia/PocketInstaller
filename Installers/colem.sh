@@ -10,13 +10,13 @@ sudo apt-get install -y build-essential zlib1g-dev libx11-dev libxext-dev unrar
 cd ~
 
 # Get source code
-wget http://fms.komkon.org/ColEm/ColEm40-Source.zip -O ~/ColEm40-Source.zip
+wget http://pocketinstaller.damianvila.com/ColEm.zip -O ~/ColEm.zip
 
 # Unzip
-unzip ~/ColEm40-Source.zip
+unzip ~/ColEm.zip
 
 # Clean up
-sudo rm -R ~/ColEm40-Source.zip
+sudo rm -R ~/ColEm.zip
 
 # Go to build folder
 cd ~/ColEm/Unix
@@ -34,4 +34,4 @@ if test -f ~/.pocket-home/.version; then
   fi
 fi
 
-echo "ColEm installed! Have fun!"
+echo "ColEm installed. Have fun!"

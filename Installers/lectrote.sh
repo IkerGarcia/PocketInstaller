@@ -2,27 +2,41 @@
 
 echo "Installing Lectrote. This may take a while. Please be patient..."
 
-# Install Lectrote: interactive fiction parser for Z-machine, Glulx, & Hugo
+# Create and set directories
 CHIP_STORY_LOCATION=/usr/local/share/IF
 sudo mkdir -p -m 775 "$CHIP_STORY_LOCATION"
 sudo chown -R chip "$CHIP_STORY_LOCATION"
 ./ifstories.py --formats="Glulx Hugo Z-code" --library="$CHIP_STORY_LOCATION"
+
 # Weirdly installing the more current version breaks things;
 # the following three lines though show how to do it.
 #wget -q -O - https://deb.nodesource.com/setup_6.x | sudo -E bash -
 #sudo apt-get update
 #sudo apt-get install -y git libnss3 nodejs
+
+# Update and install Lectrote: interactive fiction parser for Z-machine, Glulx, & Hugo
 sudo apt-get update
 sudo apt-get install -y git libnss3 nodejs nodejs-legacy npm
-wget -O /tmp/lectrote.tgz https://github.com/erkyrath/lectrote/archive/lectrote-1.2.5.tar.gz
+
+# Get source code
+wget -O /tmp/lectrote.tgz https://github.com/erkyrath/lectrote/archive/lectrote-1.2.9.tar.gz
+
+# Untar
 tar zxvf /tmp/lectrote.tgz -C /home/chip
+
+# Clean up
 rm /tmp/lectrote.tgz
-cp -p lectrote.patch /home/chip/lectrote-lectrote-1.2.5
-cd /home/chip/lectrote-lectrote-1.2.5
+
+# Put patch
+cp -p lectrote.patch /home/chip/lectrote-lectrote-1.2.9
+
+# Go to build folder
+cd /home/chip/lectrote-lectrote-1.2.9
 patch -p0 < lectrote.patch
 sudo npm install -g
+
 # Clean up when we're done
-rm -rf /home/chip/lectrote-lectrote-1.2.5
+rm -rf /home/chip/lectrote-lectrote-1.2.9
 
 # Lectrote icon
 if test -f ~/.pocket-home/.version; then
@@ -34,4 +48,4 @@ if test -f ~/.pocket-home/.version; then
   fi
 fi
 
-echo "Lectrote installed! Have fun!"
+echo "Lectrote installed. Have fun!"

@@ -2,21 +2,31 @@
 
 echo "Installing PCSX. This may take a while. Please be patient..."
 
+# Update and install dependencies
+sudo apt-get update
 sudo apt-get install -y git build-essential libsdl1.2-dev
 
+# Get code
 sudo git clone https://github.com/notaz/pcsx_rearmed.git /home/chip/pcsx_rearmed
 
+# Go to build folder
 cd /home/chip/pcsx_rearmed
 
+# Modify
 sudo sed -i "/#define MENU_X2/c#define MENU_X2 0" frontend/menu.c
 
+# Update
 sudo git submodule update --init
 export CFLAGS="-mcpu=cortex-a8 -mtune=cortex-a8 -mfpu=neon"
 sudo ./configure --sound-drivers="sdl"
+
+# Build
 sudo make
 
+# Change access permissions
 sudo chmod +x pcsx
 
+# Copy to directory
 sudo cp pcsx /usr/local/bin
 
 # PCSX icon
@@ -29,4 +39,4 @@ if test -f ~/.pocket-home/.version; then
   fi
 fi
 
-echo "PCSX installed! Have fun!"
+echo "PCSX installed. Have fun!"

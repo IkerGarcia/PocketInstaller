@@ -2,26 +2,35 @@
 
 echo "Installing RetroArch. This may take a while. Please be patient..."
 
+# Zeroing working dir.
 cd ~
 
+# Update and install
 sudo apt-get update
 sudo apt-get install -y build-essential git pkg-config libsdl2-dev libsdl1.2-dev
 
+# Clone project
 git clone https://github.com/libretro/RetroArch.git
-cd ~/RetroArch
 
+# Go to build folder
+cd ~/RetroArch
 ./configure --enable-opengles --disable-oss --disable-sdl --disable-ffmpeg --disable-vg --disable-cg --enable-neon --enable-floathard
 
+# Build
 make
 sudo make install
 
-mkdir ~/.config/retroarch && cp ~/PocketInstaller/Configuration/retroarch.cfg ~/.config/retroarch/retroarch.cfg
+# Create dir and move config files
+mkdir ~/.config/retroarch && cp /usr/local/bin/pocketinstaller/Configuration/retroarch.cfg ~/.config/retroarch/retroarch.cfg
 
+# Go to folder
 cd
 
+# Cone LibRetro
 git clone https://github.com/libretro/gambatte-libretro.git
 cd ~/gambatte-libretro
 
+# Build LibRetro
 make -f Makefile.libretro
 
 # RetroArch icon
@@ -34,4 +43,4 @@ if test -f ~/.pocket-home/.version; then
   fi
 fi
 
-echo "RetroArch installed! Have fun!"
+echo "RetroArch installed. Have fun!"
