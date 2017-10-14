@@ -2,6 +2,8 @@
 
 echo "Installing DosBox. This may take a while. Please be patient..."
 
+# Update and install
+sudo apt-get update
 sudo apt-get install -y dosbox
 
 # DOSBox icon
@@ -14,4 +16,4 @@ if test -f ~/.pocket-home/.version; then
   fi
 fi
 
-echo "DosBox installed! Have fun!"
+echo "DosBox installed. Have fun!"

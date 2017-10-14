@@ -11,16 +11,34 @@ then
   sudo rm -rf "$ZOOM_STORY_LOCATION"
   sudo ln -s "$CHIP_STORY_LOCATION" "$ZOOM_STORY_LOCATION"
 fi
+
+# Make dirs
 sudo mkdir -p -m 775 "$CHIP_STORY_LOCATION"
 sudo chown -R chip "$CHIP_STORY_LOCATION"
+
+#
 ./ifstories.py --formats="Z-code" --library="$CHIP_STORY_LOCATION"
+
+# Get files
 wget -O /tmp/zoom.tgz http://www.logicalshift.co.uk/unix/zoom/zoom-1.1.5.tar.gz
+
+# Untar
 tar zxvf /tmp/zoom.tgz -C /home/chip
+
+# Clean up
 rm /tmp/zoom.tgz
+
+# Copy
 cp -p zoom.patch /home/chip/zoom-1.1.5
+
+# Go to
 cd /home/chip/zoom-1.1.5
 ./configure
+
+# Patch
 patch -p0 < zoom.patch
+
+# Build
 make
 sudo make install-strip
 
@@ -37,4 +55,4 @@ if test -f ~/.pocket-home/.version; then
   fi
 fi
 
-echo "Zoom installed! Have fun!"
+echo "Zoom installed. Have fun!"

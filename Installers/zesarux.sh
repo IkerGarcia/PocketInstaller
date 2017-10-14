@@ -10,20 +10,20 @@ sudo apt-get install -y gcc g++ libsdl1.2-dev libsdl-image1.2-dev libsdl-mixer1.
 cd ~
 
 # Download source code
-wget https://downloads.sourceforge.net/project/zesarux/ZEsarUX-4.1/ZEsarUX_src-4.1.tar.gz /ZEsarUX_src-4.1.tar.gz
+wget http://pocketinstaller.damianvila.com/ZEsarUX.tar.gz /ZEsarUX.tar.gz
 
 # Extract
-tar -xzvf ~/ZEsarUX_src-4.1.tar.gz
+tar -xzvf ~/ZEsarUX.tar.gz
 
 # Clean up
-sudo rm -R ~/ZEsarUX_src-4.1.tar.gz
+sudo rm -R ~/ZEsarUX.tar.gz
 
 # Modify source code
-sudo cp -R ~/PocketInstaller/Configuration/scrsdl.c ~/ZEsarUX-4.1/scrsdl.c
-sudo cp -R ~/PocketInstaller/Configuration/scrxwindows.c ~/ZEsarUX-4.1/scrxwindows.c
+sudo cp -R /usr/local/bin/pocketinstaller/Configuration/scrsdl.c ~/ZEsarUX-5.0/scrsdl.c
+sudo cp -R /usr/local/bin/pocketinstaller/Configuration/scrxwindows.c ~/ZEsarUX-5.0/scrxwindows.c
 
 # Compile
-cd ~/ZEsarUX-4.1
+cd ~/ZEsarUX-5.0
 chmod +x configure
 ./configure
 
@@ -36,9 +36,9 @@ if test -f ~/.pocket-home/.version; then
   IS_ICON_PRESENT=`jq '.pages[0] | .items[] | select(.name == "ZEsarUX")' ~/.pocket-home/config.json`
   if [ -z ${IS_ICON_PRESENT} ]
   then
-    jq '(.pages[0] | .items) |= . + [{ "name": "ZEsarUX", "icon": "/usr/local/bin/pocketinstaller/Icons/zesarux.png", "shell": "/home/chip/zesarux" }]' ~/.pocket-home/config.json > tmp.$$.json
+    jq '(.pages[0] | .items) |= . + [{ "name": "ZEsarUX", "icon": "/usr/local/bin/pocketinstaller/Icons/zesarux.png", "shell": "./zesarux --vo sdl --ao null -zoom 1" }]' ~/.pocket-home/config.json > tmp.$$.json
     mv tmp.$$.json ~/.pocket-home/config.json
   fi
 fi
 
-echo "ZEsarUX installed! Have fun!"
+echo "ZEsarUX installed. Have fun!"

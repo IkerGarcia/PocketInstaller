@@ -2,7 +2,7 @@
 
 echo "Installing Minecraft. This may take a while. Please be patient..."
 
-# Zeroing working dir.
+# Zeroing working dir
 cd ~
 
 # Turned wget to syntax "wget foo -O bar"
@@ -11,19 +11,19 @@ wget https://github.com/NextThingCo/chipcraft/archive/master.zip -O ~/master.zip
 # Unzip bar
 unzip ~/master.zip
 
-# Clean up.
+# Clean up
 sudo rm -R ~/master.zip
 
-# Go to build folder.
+# Go to build folder
 cd ~/chipcraft-master
 
-# Make executable.
+# Make executable
 sudo chmod +x build.sh
 
-# Build.
+# Build
 ./build.sh
 
-# Moving start shellscript to base folder.
+# Moving start shellscript to base folder
 mv ~/chipcraft-master/mcpi/start.sh ~/chipcraft-master/start.sh
 
 # Minecraft icon
@@ -36,4 +36,4 @@ if test -f ~/.pocket-home/.version; then
   fi
 fi
 
-echo "Minecraft installed! Have fun!"
+echo "Minecraft installed. Have fun!"

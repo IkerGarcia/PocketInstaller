@@ -2,12 +2,16 @@
 
 echo "Installing Gargoyle. This may take a while. Please be patient..."
 
-# Install Gargoyle: interactive fiction parser for many formats
+# Update
+sudo apt-get update
+
+# Create and set directories
 CHIP_STORY_LOCATION=/usr/local/share/IF
 sudo mkdir -p -m 775 "$CHIP_STORY_LOCATION"
 sudo chown -R chip "$CHIP_STORY_LOCATION"
 ./ifstories.py -f "ADRIFT Alan Glulx TADS Z-code" -l "$CHIP_STORY_LOCATION"
-sudo apt-get update
+
+# Install Gargoyle: interactive fiction parser for many formats
 sudo apt-get install -y gargoyle-free
 
 # Gargoyle icon
@@ -20,4 +24,4 @@ if test -f ~/.pocket-home/.version; then
   fi
 fi
 
-echo "Gargoyle installed! Have fun!"
+echo "Gargoyle installed. Have fun!"

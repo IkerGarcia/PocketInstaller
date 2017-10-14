@@ -2,15 +2,20 @@
 
 echo "Installing OpenArena (Quake 3). This may take a while. Please be patient..."
 
+# Update and install
 sudo apt-get update
 sudo apt-get install -y git
 
+# Get code
 git clone https://github.com/NextThingCo/ioquake3-gles
 
+# Change Directory
 cd ioquake3-gles
 
+# Change access permissions
 sudo chmod +x build.sh
 
+# Build
 ./build.sh
 
 # OpenArena icon
@@ -23,4 +28,4 @@ if test -f ~/.pocket-home/.version; then
   fi
 fi
 
-echo "OpenArena (Quake 3) installed! Have fun!"
+echo "OpenArena (Quake 3) installed. Have fun!"
