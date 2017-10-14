@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo "Installing ZEsarUX. This make take a while. Please be patient..."
+echo "Installing ZEsarUX. This may take a while. Please be patient..."
 
 # Update and install dependencies
 sudo apt-get update
@@ -36,9 +36,9 @@ if test -f ~/.pocket-home/.version; then
   IS_ICON_PRESENT=`jq '.pages[0] | .items[] | select(.name == "ZEsarUX")' ~/.pocket-home/config.json`
   if [ -z ${IS_ICON_PRESENT} ]
   then
-    jq '(.pages[0] | .items) |= . + [{ "name": "ZEsarUX", "icon": "~/PocketInstaller/Icons/zesarux.png", "shell": "/home/chip/zesarux" }]' ~/.pocket-home/config.json > tmp.$$.json
+    jq '(.pages[0] | .items) |= . + [{ "name": "ZEsarUX", "icon": "/usr/local/bin/pocketinstaller/Icons/zesarux.png", "shell": "/home/chip/zesarux" }]' ~/.pocket-home/config.json > tmp.$$.json
     mv tmp.$$.json ~/.pocket-home/config.json
   fi
 fi
 
-echo "ZEsarUX installed!"
+echo "ZEsarUX installed! Have fun!"

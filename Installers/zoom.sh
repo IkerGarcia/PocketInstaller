@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo "Installing Zoom. This make take a while. Please be patient..."
+echo "Installing Zoom. This may take a while. Please be patient..."
 
 # Install Zoom: interactive fiction parser for Z-machine
 CHIP_STORY_LOCATION=/usr/local/share/IF
@@ -32,9 +32,9 @@ if test -f ~/.pocket-home/.version; then
   IS_ICON_PRESENT=`jq '.pages[0] | .items[] | select(.name == "Zoom")' ~/.pocket-home/config.json`
   if [ -z ${IS_ICON_PRESENT} ]
   then
-    jq '(.pages[0] | .items) |= . + [{ "name": "Zoom", "icon": "~/PocketInstaller/Icons/zoom.png", "shell": "zoom" }]' ~/.pocket-home/config.json > tmp.$$.json
+    jq '(.pages[0] | .items) |= . + [{ "name": "Zoom", "icon": "/usr/local/bin/pocketinstaller/Icons/zoom.png", "shell": "zoom" }]' ~/.pocket-home/config.json > tmp.$$.json
     mv tmp.$$.json ~/.pocket-home/config.json
   fi
 fi
 
-echo "Zoom installed!"
+echo "Zoom installed! Have fun!"

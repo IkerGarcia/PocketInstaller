@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo "Installing XU4 (Ultima IV). This make take a while. Please be patient..."
+echo "Installing XU4 (Ultima IV). This may take a while. Please be patient..."
 
 # Install XU4: play classic Ultima IV on current hardware
 sudo apt-get update
@@ -23,9 +23,9 @@ if test -f ~/.pocket-home/.version; then
   IS_ICON_PRESENT=`jq '.pages[0] | .items[] | select(.name == "XU4")' ~/.pocket-home/config.json`
   if [ -z ${IS_ICON_PRESENT} ]
   then
-    jq '(.pages[0] | .items) |= . + [{ "name": "XU4", "icon": "~/PocketInstaller/Icons/xu4.png", "shell": "/home/chip/PocketInstaller/Launchers/xu4.sh" }]' ~/.pocket-home/config.json > tmp.$$.json
+    jq '(.pages[0] | .items) |= . + [{ "name": "XU4", "icon": "/usr/local/bin/pocketinstaller/Icons/xu4.png", "shell": "/home/chip/PocketInstaller/Launchers/xu4.sh" }]' ~/.pocket-home/config.json > tmp.$$.json
     mv tmp.$$.json ~/.pocket-home/config.json
   fi
 fi
 
-echo "XU4 (Ultima IV) installed!"
+echo "XU4 (Ultima IV) installed! Have fun!"

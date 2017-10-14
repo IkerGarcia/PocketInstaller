@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo "Installing ColEm. This make take a while. Please be patient..."
+echo "Installing ColEm. This may take a while. Please be patient..."
 
 # Update and install dependencies
 sudo apt-get update
@@ -29,9 +29,9 @@ if test -f ~/.pocket-home/.version; then
   IS_ICON_PRESENT=`jq '.pages[0] | .items[] | select(.name == "ColEm")' ~/.pocket-home/config.json`
   if [ -z ${IS_ICON_PRESENT} ]
   then
-    jq '(.pages[0] | .items) |= . + [{ "name": "ColEm", "icon": "~/PocketInstaller/Icons/colem.png", "shell": "/home/chip/ColEm/Unix/colem" }]' ~/.pocket-home/config.json > tmp.$$.json
+    jq '(.pages[0] | .items) |= . + [{ "name": "ColEm", "icon": "/usr/local/bin/pocketinstaller/Icons/colem.png", "shell": "/home/chip/ColEm/Unix/colem" }]' ~/.pocket-home/config.json > tmp.$$.json
     mv tmp.$$.json ~/.pocket-home/config.json
   fi
 fi
 
-echo "ColEm installed!"
+echo "ColEm installed! Have fun!"

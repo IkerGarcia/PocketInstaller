@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo "Installing Minecraft. This make take a while. Please be patient..."
+echo "Installing Minecraft. This may take a while. Please be patient..."
 
 # Zeroing working dir.
 cd ~
@@ -31,9 +31,9 @@ if test -f ~/.pocket-home/.version; then
   IS_ICON_PRESENT=`jq '.pages[0] | .items[] | select(.name == "Minecraft")' ~/.pocket-home/config.json`
   if [ -z ${IS_ICON_PRESENT} ]
   then
-    jq '(.pages[0] | .items) |= . + [{ "name": "Minecraft", "icon": "~/PocketInstaller/Icons/minecraft.png", "shell": "/home/chip/chipcraft-master/start.sh" }]' ~/.pocket-home/config.json > tmp.$$.json
+    jq '(.pages[0] | .items) |= . + [{ "name": "Minecraft", "icon": "/usr/local/bin/pocketinstaller/Icons/minecraft.png", "shell": "/home/chip/chipcraft-master/start.sh" }]' ~/.pocket-home/config.json > tmp.$$.json
     mv tmp.$$.json ~/.pocket-home/config.json
   fi
 fi
 
-echo "Minecraft installed!"
+echo "Minecraft installed! Have fun!"

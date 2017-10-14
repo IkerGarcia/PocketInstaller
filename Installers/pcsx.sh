@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo "Installing PCSX. This make take a while. Please be patient..."
+echo "Installing PCSX. This may take a while. Please be patient..."
 
 sudo apt-get install -y git build-essential libsdl1.2-dev
 
@@ -24,9 +24,9 @@ if test -f ~/.pocket-home/.version; then
   IS_ICON_PRESENT=`jq '.pages[0] | .items[] | select(.name == "PCSX")' ~/.pocket-home/config.json`
   if [ -z ${IS_ICON_PRESENT} ]
   then
-    jq '(.pages[0] | .items) |= . + [{ "name": "PCSX", "icon": "~/PocketInstaller/Icons/pcsx.png", "shell": "pcsx" }]' ~/.pocket-home/config.json > tmp.$$.json
+    jq '(.pages[0] | .items) |= . + [{ "name": "PCSX", "icon": "/usr/local/bin/pocketinstaller/Icons/pcsx.png", "shell": "pcsx" }]' ~/.pocket-home/config.json > tmp.$$.json
     mv tmp.$$.json ~/.pocket-home/config.json
   fi
 fi
 
-echo "PCSX installed!"
+echo "PCSX installed! Have fun!"
