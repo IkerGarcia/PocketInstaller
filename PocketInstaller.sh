@@ -1,6 +1,6 @@
 #!/bin/bash
 
-cd /usl/local/bin/pocketinstaller
+cd ~/PocketInstaller
 
 #sudo rm -R -f log.txt
 echo "Welcome to PocketInstaller" | sudo tee log.txt
@@ -133,7 +133,7 @@ if test -f ~/ColEm/ColEm.c; then
 else
   P16="ColEm|Installers/colem.sh"
 fi
-if test -f ~/ZEsarUX-5.0/scrsdl.c; then
+if test -f ~/ZEsarUX-4.1/scrsdl.c; then
   :
 else
   P17="ZEsarUX|Installers/zesarux.sh"
@@ -186,7 +186,7 @@ if test -f ~/.pocket-home/.version; then
   IS_ICON_PRESENT=`jq '.pages[0] | .items[] | select(.name == "PocketInstaller")' ~/.pocket-home/config.json`
   if [ -z ${IS_ICON_PRESENT} ]
   then
-    jq '(.pages[0] | .items) |= . + [{ "name": "PocketInstaller", "icon": "/usl/local/bin/pocketinstaller/desktopicon.png", "shell": "vala-terminal -fs 8 -g 20 20 -e /usl/local/bin/pocketinstaller/PocketInstaller.sh" }]' ~/.pocket-home/config.json > tmp.$$.json
+    jq '(.pages[0] | .items) |= . + [{ "name": "PocketInstaller", "icon": "~/PocketInstaller/desktopicon.png", "shell": "vala-terminal -fs 8 -g 20 20 -e ~/PocketInstaller/PocketInstaller.sh" }]' ~/.pocket-home/config.json > tmp.$$.json
     mv tmp.$$.json ~/.pocket-home/config.json
   fi
   zenity --info --text="Restart Pocket-Home to show icons for new software."
