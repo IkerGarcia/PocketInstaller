@@ -6,7 +6,7 @@ echo "Installing Lectrote. This may take a while. Please be patient..."
 CHIP_STORY_LOCATION=/usr/local/share/IF
 sudo mkdir -p -m 775 "$CHIP_STORY_LOCATION"
 sudo chown -R chip "$CHIP_STORY_LOCATION"
-./ifstories.py --formats="Glulx Hugo Z-code" --library="$CHIP_STORY_LOCATION"
+. /usr/local/bin/pocketinstaller/Installers/ifstories.py --formats="Glulx Hugo Z-code" --library="$CHIP_STORY_LOCATION"
 
 # Weirdly installing the more current version breaks things;
 # the following three lines though show how to do it.
@@ -28,7 +28,7 @@ tar zxvf /tmp/lectrote.tgz -C /home/chip
 rm /tmp/lectrote.tgz
 
 # Put patch
-cp -p lectrote.patch /home/chip/lectrote-lectrote-1.2.9
+cp -p /usr/local/bin/pocketinstaller/Installers/lectrote.patch /home/chip/lectrote-lectrote-1.2.9
 
 # Go to build folder
 cd /home/chip/lectrote-lectrote-1.2.9

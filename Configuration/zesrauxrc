@@ -1,0 +1,14 @@
+;ZEsarUX sample configuration file
+;
+;Lines beginning with ; or # are ignored
+
+
+;Run zesarux with --help or --experthelp to see all the options
+;--disableborder
+--vo sdl
+--ao sdl
+;--hidemousepointer
+;--disablefooter
+
+;Remap Fire Event. Uncomment and amend if you wish to change the default button 3.
+;--joystickevent 3 Fire
