@@ -27,6 +27,9 @@ sudo mv ultima4.zip u4upgrad.zip /usr/local/lib/u4
 # Clean up when we're done
 rm -rf /home/chip/xu4-code
 
+# Move to home dir
+cd ~
+
 # XU4 icon
 if test -f ~/.pocket-home/.version; then
   IS_ICON_PRESENT=`jq '.pages[0] | .items[] | select(.name == "XU4")' ~/.pocket-home/config.json`
