@@ -29,6 +29,9 @@ sudo chmod +x pcsx
 # Copy to directory
 sudo cp pcsx /usr/local/bin
 
+# Move to home dir
+cd ~
+
 # PCSX icon
 if test -f ~/.pocket-home/.version; then
   IS_ICON_PRESENT=`jq '.pages[0] | .items[] | select(.name == "PCSX")' ~/.pocket-home/config.json`

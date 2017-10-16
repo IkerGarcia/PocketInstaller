@@ -22,8 +22,8 @@ mkdir -p /home/chip/.vice
 # Copy config to directory
 sudo cp /usr/local/bin/pocketinstaller/Configuration/vicerc /home/chip/.vice/vicerc
 
-# Move to dir
-cd -
+# Move to home dir
+cd ~
 
 # VICE icon
 if test -f ~/.pocket-home/.version; then
