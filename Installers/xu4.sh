@@ -8,7 +8,7 @@ sudo apt-get install -y build-essential subversion libxml2-dev libsdl-mixer1.2-d
 
 # Get code
 svn checkout https://svn.code.sf.net/p/xu4/code/trunk /home/chip/xu4-code
-cp -p xu4.patch /home/chip/xu4-code/u4/src
+cp -p /usr/local/bin/pocketinstaller/Installers/xu4.patch /home/chip/xu4-code/u4/src
 cd /home/chip/xu4-code/u4/src
 wget -O ultima4.zip http://www.ultima-universe.com/downloads/ultima4v101.zip
 wget -O u4upgrad.zip https://downloads.sourceforge.net/project/xu4/Ultima%204%20VGA%20Upgrade/1.3/u4upgrad.zip
